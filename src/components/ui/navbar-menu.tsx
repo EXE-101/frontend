@@ -101,7 +101,7 @@ export const ProductItem = ({
         className="flex-shrink-0 rounded-md shadow-sm object-cover h-[70px] w-[140px]"
       />
       <div>
-        <h4 className="text-base font-bold mb-1 text-black dark:text-white group-hover:text-[#006341] transition-colors">
+        <h4 className="text-base font-bold mb-1 text-black dark:text-white group-hover:text-[#003D33] transition-colors">
           {title}
         </h4>
         <p className="text-neutral-500 text-xs max-w-[10rem] leading-relaxed">
@@ -121,7 +121,7 @@ export const HoveredLink = ({
   return (
     <Link
       {...rest}
-      className="text-neutral-600 dark:text-neutral-300 hover:text-[#006341] font-medium transition-colors block py-1"
+      className="text-neutral-600 dark:text-neutral-300 hover:text-[#003D33] font-medium transition-colors block py-1"
     >
       {children}
     </Link>

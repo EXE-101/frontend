@@ -27,7 +27,7 @@ export default function WarpShaderHero() {
   const animationFrameIdRef = useRef<number | null>(null);
 
   const resolvedCanvasColorsRef = useRef({
-    strokeStyle: { r: 255, g: 255, b: 255 }, // White for the teal background
+    strokeStyle: { r: 255, g: 255, b: 255 }, // White arrow for dark background
   });
 
   // Set up color resolution for the arrow
@@ -37,7 +37,7 @@ export default function WarpShaderHero() {
     document.body.appendChild(tempElement);
 
     const updateResolvedColors = () => {
-      // Use white color for the arrow to stand out on the teal background
+      // Use white color for the arrow to stand out on the dark green background
       resolvedCanvasColorsRef.current.strokeStyle = { r: 255, g: 255, b: 255 };
     };
     
@@ -179,24 +179,25 @@ export default function WarpShaderHero() {
           scale={1}
           rotation={0}
           speed={1}
+          // THAY ĐỔI: Sử dụng bảng màu xanh đậm (#003D33)
           colors={[
-            "hsl(172, 67%, 25%)",
-            "hsl(172, 60%, 35%)",
-            "hsl(172, 55%, 30%)",
-            "hsl(172, 50%, 40%)"
+            "#003D33", // Màu chủ đạo (Dark Teal)
+            "#002822", // Màu tối hơn để tạo chiều sâu
+            "#004D40", // Màu sáng hơn một chút
+            "#0F5C4E"  // Màu nhấn nhẹ
           ]}
         />
       </div>
 
       <div className="relative z-10 min-h-screen flex flex-col items-center justify-center px-4 py-10">
-        {/* Container chính với w-full - Giảm margin bottom từ mb-1 xuống mb-0 */}
+        {/* Container chính với w-full */}
         <div className="w-full px-4 flex items-center justify-center mb-0">
           <div className="w-full max-w-[1800px] h-[200px] md:h-[310px] flex items-center justify-center overflow-visible">
             <TextHoverEffect text="LASTBITE" />
           </div>
         </div>
 
-        {/* Slogan Section - Thêm negative margin top để kéo lên gần hơn */}
+        {/* Slogan Section */}
         <div className="w-full max-w-4xl text-center space-y-4 -mt-2 mb-5">
           <h2 className="text-white text-2xl md:text-4xl font-semibold tracking-tight">
             <Typewriter
@@ -217,7 +218,6 @@ export default function WarpShaderHero() {
             Get amazing deals on quality food and help make a difference in your community.
           </p>
 
-          {/* Text Reveal Effect - Hiệu ứng hover reveal */}
           <div className="relative pt-8 overflow-hidden">
             <div className="group cursor-pointer">
             </div>
@@ -229,18 +229,19 @@ export default function WarpShaderHero() {
           <Link href="/how-to-collect">
             <button 
               ref={targetRef}
-              className="px-10 py-4 bg-white text-[hsl(172,67%,25%)] font-bold rounded-full hover:bg-white/95 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
+              // THAY ĐỔI: Đổi màu chữ text-[...] thành text-[#003D33]
+              className="px-10 py-4 bg-white text-[#003D33] font-bold rounded-full hover:bg-white/95 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
             >
               Get Started
             </button>
           </Link>
-          <button className="px-10 py-4 bg-white/20 backdrop-blur-sm border-2 border-white/50 rounded-full text-white font-semibold hover:bg-white/30 hover:border-white/70 transition-all duration-300 hover:scale-105">
+          <button className="px-10 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-full text-white font-semibold hover:bg-white/20 hover:border-white/50 transition-all duration-300 hover:scale-105">
             Learn More
           </button>
         </div>
       </div>
 
-      {/* Arrow Canvas - positioned at highest z-index */}
+      {/* Arrow Canvas */}
       <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-50"></canvas>
     </main>
   );

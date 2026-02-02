@@ -100,7 +100,7 @@ export function SimpleHeader() {
       >
         {/* --- LOGO --- */}
         <Link href="/" className="font-bold text-2xl flex items-center gap-2 relative z-20">
-          <span className="text-emerald-700 dark:text-emerald-500">Too Good To Go</span>
+          <span className="text-emerald-700 dark:text-emerald-700">LASTBITE</span>
         </Link>
 
         {/* --- DESKTOP MENU --- */}

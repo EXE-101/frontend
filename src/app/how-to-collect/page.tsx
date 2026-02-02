@@ -6,7 +6,6 @@ import { HowItWorksSection } from '@/components/HowItWorksSection';
 import { ImpactSection } from '@/components/ImpactSection';
 import { TestimonialsSection } from '@/components/TestimonialsSection';
 import { FAQ } from '@/components/FAQ';
-import { CTASection } from '@/components/CTASection';
 import { Footer } from '@/components/Footer';
 
 export const metadata = {
@@ -25,7 +24,6 @@ export default function Home() {
       <ImpactSection />
       <TestimonialsSection />
       <FAQ />
-      <CTASection />
       <Footer />
     </div>
   );

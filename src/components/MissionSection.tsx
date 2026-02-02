@@ -184,7 +184,7 @@ export function LastBiteHero({
             className="inline-flex items-center px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-sm font-medium mb-6"
         >
             {/* THAY ĐỔI: Màu dot đầm hơn */}
-            <span className="w-2 h-2 rounded-full bg-emerald-500 mr-2 animate-pulse"/>
+            <span className="w-2 h-2 rounded-full bg-[#003D33] mr-2 animate-pulse"/>
             {badgeText}
         </motion.div>
 
@@ -193,7 +193,7 @@ export function LastBiteHero({
             1. Giảm cỡ chữ xuống (text-4xl -> lg:text-7xl) cho cân bằng.
             2. Chia layout Flex col để ép dòng thành 2 bậc thang rõ rệt. 
         */}
-        <h1 className="flex flex-col items-center justify-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 drop-shadow-2xl leading-[1.1]">
+        <h1 className="flex flex-col items-center justify-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#FFF5E1] mb-6 drop-shadow-2xl leading-[1.1]">
             <span className="block">{heading}</span>
             <span className="flex items-center mt-1 sm:mt-2">
                 Share the 
@@ -212,13 +212,13 @@ export function LastBiteHero({
             <button
                 ref={targetRef}
                 // THAY ĐỔI: bg-emerald-500 để màu xanh đầm hơn, sang hơn
-                className="relative group inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-emerald-500 rounded-full hover:bg-emerald-400 hover:scale-105 hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
+                className="relative group inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-300 bg-emerald-600 rounded-full hover:bg-emerald-800 hover:scale-105 hover:shadow-[0_0_30px_rgba(16,185,129,0.5)] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-800"
             >
                 <Download className="w-5 h-5 mr-2 group-hover:animate-bounce" />
                 {ctaText}
             </button>
             
-            <button className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white border border-white/30 rounded-full hover:bg-white/10 backdrop-blur-sm transition-colors group">
+            <button className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-[#FFF5E1] border border-white/30 rounded-full hover:bg-white/10 backdrop-blur-sm transition-colors group">
                 How it works 
                 {/* THAY ĐỔI: Hover icon màu xanh đầm */}
                 <PlayCircle className="w-5 h-5 ml-2 group-hover:text-emerald-500 transition-colors" />

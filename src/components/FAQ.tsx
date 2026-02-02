@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Accordion,
   AccordionContent,
@@ -46,28 +48,43 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section className="bg-secondary/10 py-20 md:py-28">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="space-y-4 mb-16 text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary text-balance">
+    // SỬA: Background đổi thành #003D33 (Xanh đậm)
+    <section className="bg-[#003D33] py-24 md:py-32 font-sans relative overflow-hidden">
+      
+      {/* Decor nền: Thêm đốm sáng nhẹ để bớt đơn điệu (Optional) */}
+      <div className="absolute top-0 left-1/2 w-[800px] h-[800px] bg-[#D4E868]/5 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+
+      <div className="max-w-4xl mx-auto px-6 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Header Section */}
+        <div className="space-y-6 mb-16 text-center">
+          <span className="text-[#D4E868] font-bold tracking-[0.2em] uppercase text-xs block mb-2">
+             Support Center
+          </span>
+          <h2 className="text-4xl md:text-5xl font-black text-[#FFF5E1] text-balance tracking-tight">
             Frequently Asked Questions
           </h2>
-          <p className="text-foreground/70 text-lg">
-            Everything you need to know about collecting your Surprise Bag
+          <p className="text-[#FFF5E1] text-lg max-w-2xl mx-auto leading-relaxed">
+            Everything you need to know about collecting your Surprise Bag and using the app.
           </p>
         </div>
 
-        <Accordion type="single" collapsible className="w-full space-y-3">
+        {/* Accordion List */}
+        <Accordion type="single" collapsible className="w-full space-y-4">
           {faqs.map((faq) => (
             <AccordionItem
               key={faq.id}
               value={faq.id}
-              className="bg-card rounded-xl border border-border px-6"
+              // SỬA: Card chuyển sang hiệu ứng kính mờ (bg-white/5) viền trắng mờ
+              className="bg-white/5 border border-white/10 rounded-2xl px-6 md:px-8 transition-all duration-300 hover:bg-white/10"
             >
-              <AccordionTrigger className="text-foreground hover:text-primary font-semibold text-base py-4">
+              {/* Trigger: Chữ trắng, khi hover đổi màu vàng chanh */}
+              <AccordionTrigger className="text-[#FFF5E1] hover:text-[#D4E868] hover:no-underline font-bold text-lg py-6 text-left [&[data-state=open]]:text-[#D4E868]">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-foreground/70 pt-0 pb-4">
+              
+              {/* Content: Màu xám bạc dễ đọc trên nền tối */}
+              <AccordionContent className="text-gray-300 text-base leading-relaxed pb-6 pt-0">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>
