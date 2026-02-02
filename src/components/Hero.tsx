@@ -51,7 +51,7 @@ export function Hero() {
                 </div>
 
                 {/* Phone Bottom */}
-                <div className="bg-gray-900 h-2" />
+                <div className="bg-agray-900 h-2" />
               </div>
 
               {/* Decorative Badge */}
