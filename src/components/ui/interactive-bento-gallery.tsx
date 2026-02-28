@@ -1,6 +1,8 @@
 "use client";
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
+import { cn } from '@/lib/utils';
 import { X, Play } from 'lucide-react';
 
 export interface MediaItemType {
@@ -56,13 +58,17 @@ const MediaItem = ({ item, className, onClick }: { item: MediaItemType, classNam
   }
 
   return (
-    <img
-      src={item.url}
-      alt={item.title}
-      className={`object-cover cursor-pointer ${className}`}
-      onClick={onClick}
-      loading="lazy"
-    />
+    <div className={cn('relative', className)}>
+      <Image
+        src={item.url}
+        alt={item.title}
+        fill
+        className="object-cover cursor-pointer"
+        onClick={onClick}
+        sizes="(max-width: 768px) 100vw, 400px"
+        loading="lazy"
+      />
+    </div>
   );
 };
 
@@ -85,7 +91,7 @@ const GalleryModal = ({ selectedItem, isOpen, onClose }: { selectedItem: MediaIt
         {selectedItem.type === 'video' ? (
           <video src={selectedItem.url} className="w-full h-full object-contain" controls autoPlay />
         ) : (
-          <img src={selectedItem.url} alt={selectedItem.title} className="w-full h-full object-contain" />
+          <Image src={selectedItem.url} alt={selectedItem.title} fill className="object-contain" sizes="100vw" />
         )}
         <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent text-white">
           <h3 className="text-2xl font-bold font-serif">{selectedItem.title}</h3>
@@ -103,7 +109,7 @@ interface InteractiveBentoGalleryProps {
 
 export const InteractiveBentoGallery: React.FC<InteractiveBentoGalleryProps> = ({ mediaItems, className }) => {
   const [selectedItem, setSelectedItem] = useState<MediaItemType | null>(null);
-  const [items, setItems] = useState(mediaItems);
+  const items = mediaItems;
   const [isDragging, setIsDragging] = useState(false);
 
   return (
@@ -136,9 +142,8 @@ export const InteractiveBentoGallery: React.FC<InteractiveBentoGalleryProps> = (
             dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
             dragElastic={0.1}
             onDragStart={() => setIsDragging(true)}
-            onDragEnd={(e, info) => {
+            onDragEnd={() => {
               setIsDragging(false);
-              // Simple swap logic visualization (optional)
             }}
           >
             <MediaItem item={item} className="w-full h-full" onClick={() => !isDragging && setSelectedItem(item)} />

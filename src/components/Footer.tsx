@@ -10,63 +10,63 @@ export function Footer() {
           <div className="space-y-4">
             <div className="flex items-center gap-2 mb-4">
               <div className="w-8 h-8 rounded-full bg-primary-foreground flex items-center justify-center font-bold text-primary text-sm">
-                TG
+                LB
               </div>
-              <span className="font-bold text-lg">Too Good To Go</span>
+              <span className="font-bold text-lg">LASTBITE</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              Making it easy for restaurants, bakeries, and stores to sell surplus food at a profit.
+              Giúp nhà hàng, tiệm bánh và cửa hàng bán thực phẩm dư thừa có lời, đồng thời giảm lãng phí cho cộng đồng.
             </p>
           </div>
 
           {/* Company Links */}
           <div className="space-y-3">
-            <h4 className="font-bold text-base mb-4">Company</h4>
+            <h4 className="font-bold text-base mb-4">Về LASTBITE</h4>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition">
-              About Us
+              Câu chuyện thương hiệu
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Our Impact
+              Tác động bền vững
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Careers
+              Tuyển dụng
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Blog
+              Bản tin
             </Link>
           </div>
 
           {/* Business Links */}
           <div className="space-y-3">
-            <h4 className="font-bold text-base mb-4">For Business</h4>
+            <h4 className="font-bold text-base mb-4">Giải pháp cho đối tác</h4>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition">
-              Partner With Us
+              Hợp tác cùng LASTBITE
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              For Retailers
+              Dành cho bán lẻ
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Resources
+              Tài nguyên vận hành
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Solutions
+              Bộ giải pháp thông minh
             </Link>
           </div>
 
           {/* Legal Links */}
           <div className="space-y-3">
-            <h4 className="font-bold text-base mb-4">Legal</h4>
+            <h4 className="font-bold text-base mb-4">Pháp lý</h4>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition">
-              Terms & Conditions
+              Điều khoản sử dụng
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Privacy Policy
+              Chính sách bảo mật
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Cookie Policy
+              Chính sách cookie
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Contact
+              Kênh liên hệ
             </Link>
           </div>
         </div>
@@ -75,7 +75,7 @@ export function Footer() {
         <div className="border-t border-primary-foreground/20 py-8 space-y-6">
           {/* Social Links */}
           <div className="flex items-center gap-6">
-            <span className="text-sm font-semibold">Follow Us</span>
+            <span className="text-sm font-semibold">Kết nối với chúng tôi</span>
             <div className="flex gap-4">
               <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition">
                 <Facebook size={20} />
@@ -95,7 +95,7 @@ export function Footer() {
           {/* Copyright */}
           <div className="pt-4 border-t border-primary-foreground/20">
             <p className="text-primary-foreground/70 text-sm text-center">
-              © {new Date().getFullYear()} Too Good To Go. All rights reserved.
+              © {new Date().getFullYear()} LASTBITE. Đã đăng ký bản quyền.
             </p>
           </div>
         </div>

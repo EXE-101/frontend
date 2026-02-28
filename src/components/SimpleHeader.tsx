@@ -9,19 +9,19 @@ import { cn } from '@/lib/utils';
 // --- 1. Cấu hình Menu (Giống mẫu bạn đưa) ---
 const NAV_ITEMS = [
   {
-    name: 'Home',
+    name: 'Trang chủ',
     link: '/',
   },
   {
-    name: 'How to Collect',
+    name: 'Cách nhận túi',
     link: '/how-to-collect',
   },
   {
-    name: 'Services', // Ví dụ menu có submenu
+    name: 'Dịch vụ', // Ví dụ menu có submenu
     link: '#',
     submenu: [
-      { name: 'For Business', desc: 'Partner with us', icon: '/business.png', href: '/business' },
-      { name: 'For Careers', desc: 'Join our team', icon: '/careers.png', href: '/careers' },
+      { name: 'Cho đối tác', desc: 'Kết nối hợp tác bền vững', icon: '/business.png', href: '/business' },
+      { name: 'Cơ hội nghề nghiệp', desc: 'Gia nhập đội ngũ LASTBITE', icon: '/careers.png', href: '/careers' },
     ]
   },
 ];
@@ -30,7 +30,7 @@ const NAV_ITEMS = [
 const useAuth = () => {
   // Đổi thành true để test giao diện đã đăng nhập
   const isLoggedIn = false; 
-  const user = { name: 'Minh Hieu', role: 'Member' };
+  const user = { name: 'Minh Hieu', role: 'Thành viên' };
   return { isLoggedIn, user };
 };
 
@@ -158,13 +158,13 @@ export function SimpleHeader() {
                 href="/auth/login" 
                 className="text-stone-700 hover:text-stone-900 dark:text-stone-300 dark:hover:text-amber-50 font-medium px-4 py-2 rounded-full hover:bg-amber-100/50 dark:hover:bg-stone-800/50 transition"
               >
-                Login
+                Đăng nhập
               </Link>
               <Link 
                 href="/download" 
                 className="px-5 py-2 bg-emerald-700 text-white font-medium rounded-full hover:bg-emerald-800 transition shadow-lg shadow-emerald-700/20 dark:shadow-emerald-500/20"
               >
-                Sign Up
+                Tạo tài khoản
               </Link>
             </>
           ) : (
@@ -196,14 +196,14 @@ export function SimpleHeader() {
                     </div>
                     
                     <Link href="/profile" className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-amber-100 dark:hover:bg-stone-700 transition text-sm text-stone-700 dark:text-stone-300">
-                      <User size={16} /> Profile
+                      <User size={16} /> Hồ sơ của tôi
                     </Link>
                     <Link href="/history" className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-amber-100 dark:hover:bg-stone-700 transition text-sm text-stone-700 dark:text-stone-300">
-                      <History size={16} /> History
+                      <History size={16} /> Lịch sử
                     </Link>
                     
                     <button className="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20 text-red-700 dark:text-red-400 transition text-sm mt-1">
-                      <LogOut size={16} /> Logout
+                      <LogOut size={16} /> Đăng xuất
                     </button>
                   </motion.div>
                 )}
@@ -241,7 +241,7 @@ export function SimpleHeader() {
         <div className="flex w-full flex-row items-center justify-between">
           {/* --- LOGO --- */}
           <Link href="/" className="font-bold text-xl text-emerald-700 dark:text-emerald-500 flex items-center gap-2 z-20">
-            <span>Too Good To Go</span>
+            <span>LASTBITE</span>
           </Link>
 
           {/* --- MOBILE TOGGLE --- */}
@@ -299,14 +299,14 @@ export function SimpleHeader() {
                         className="w-full text-center py-3 rounded-lg bg-amber-100 dark:bg-stone-800 font-medium text-stone-800 dark:text-amber-50 hover:bg-amber-200 dark:hover:bg-stone-700 transition"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        Login
+                        Đăng nhập
                       </Link>
                       <Link
                         href="/download"
                         className="w-full text-center py-3 bg-emerald-700 text-white font-medium rounded-lg shadow-lg shadow-emerald-700/20 hover:bg-emerald-800 transition"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        Sign Up
+                        Tạo tài khoản
                       </Link>
                     </div>
                   ) : (
@@ -317,7 +317,7 @@ export function SimpleHeader() {
                         </div>
                         <div>
                           <p className="font-medium text-stone-900 dark:text-amber-50">{user.name}</p>
-                          <p className="text-xs text-stone-600 dark:text-stone-400">View Profile</p>
+                          <p className="text-xs text-stone-600 dark:text-stone-400">Xem hồ sơ</p>
                         </div>
                       </div>
                       <Link 
@@ -325,20 +325,20 @@ export function SimpleHeader() {
                         className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-amber-100 dark:hover:bg-stone-800 transition text-stone-700 dark:text-stone-300"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <User size={16} /> Profile
+                        <User size={16} /> Hồ sơ của tôi
                       </Link>
                       <Link 
                         href="/history"
                         className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-amber-100 dark:hover:bg-stone-800 transition text-stone-700 dark:text-stone-300"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <History size={16} /> History
+                        <History size={16} /> Lịch sử
                       </Link>
                       <button 
                         className="w-full text-left flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20 text-red-700 dark:text-red-400 transition font-medium"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <LogOut size={16} /> Logout
+                        <LogOut size={16} /> Đăng xuất
                       </button>
                     </div>
                   )}

@@ -2,6 +2,7 @@
 
 import React, { useRef, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { ArrowUpRight, Leaf, Users, PiggyBank, Handshake, Zap } from 'lucide-react';
 
 // --- DATA ---
@@ -9,36 +10,36 @@ const impactData = [
   {
     id: 'food-saved',
     icon: <Leaf className="w-6 h-6" />,
-    title: 'Reduce Food Waste',
-    description: 'LastBite has rescued thousands of kg of food from landfills, minimizing environmental impact.',
+    title: 'Cắt giảm lãng phí thực phẩm',
+    description: 'LASTBITE đã cứu hàng nghìn ki-lô-gam thực phẩm khỏi bị chôn lấp, giảm đáng kể tác động môi trường.',
     image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1080&auto=format&fit=crop',
   },
   {
     id: 'partners',
     icon: <Handshake className="w-6 h-6" />,
-    title: 'Trusted Partners',
-    description: 'Partnering with hundreds of reputable supermarkets, bakeries, and stores.',
+    title: 'Đối tác tin cậy',
+    description: 'Đồng hành cùng hàng trăm siêu thị, tiệm bánh và cửa hàng uy tín.',
     image: 'https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=1080&auto=format&fit=crop',
   },
   {
     id: 'community',
     icon: <Users className="w-6 h-6" />,
-    title: 'Sustainable Community',
-    description: 'Over 10,000 users have joined LastBite, building a green lifestyle together.',
+    title: 'Cộng đồng bền vững',
+    description: 'Hơn 10.000 người dùng đã gia nhập LASTBITE để cùng nhau sống xanh.',
     image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=1080&auto=format&fit=crop',
   },
   {
     id: 'savings',
     icon: <PiggyBank className="w-6 h-6" />,
-    title: 'Cost Savings',
-    description: 'Users save an average of 50-70% on food costs monthly, improving quality of life.',
+    title: 'Tiết kiệm chi phí',
+    description: 'Người dùng tiết kiệm trung bình 50-70% chi phí ăn uống mỗi tháng, nâng tầm chất lượng sống.',
     image: 'https://images.unsplash.com/photo-1579621970795-87facc2f976d?q=80&w=1080&auto=format&fit=crop',
   },
   {
     id: 'technology',
     icon: <Zap className="w-6 h-6" />,
-    title: 'Advanced Tech',
-    description: 'AI-driven platform optimizing supply-demand connections for a seamless experience.',
+    title: 'Công nghệ tiên tiến',
+    description: 'Nền tảng ứng dụng AI tối ưu kết nối cung - cầu để trải nghiệm luôn mượt mà.',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1080&auto=format&fit=crop',
   },
 ];
@@ -51,11 +52,14 @@ const ImpactCard = ({ item }: { item: typeof impactData[0] }) => {
     >
       {/* Background Image: Không ám màu, gradient đen dưới đáy */}
       <div className="absolute inset-0">
-        <img 
+        <Image 
             src={item.image} 
             alt={item.title} 
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none" 
-            draggable="false" 
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-110 pointer-events-none select-none"
+            sizes="(max-width: 768px) 320px, 400px"
+            draggable={false}
+            priority={false}
         />
         <div className="absolute inset-0 bg-linear-to-t from-black/90 via-black/20 to-transparent opacity-80" />
       </div>
@@ -123,15 +127,15 @@ export function ImpactSection() {
         <div className="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
             <div className="max-w-2xl">
                 <span className="text-[#D4E868] font-bold tracking-[0.2em] uppercase text-xs mb-3 block">
-                    Our Values
+                    Giá trị cốt lõi
                 </span>
                 <h2 className="text-4xl md:text-5xl font-black text-[#FFF5E1] tracking-tight">
-                    Creating Impact Together
+                    Kiến tạo tác động bền vững
                 </h2>
             </div>
             
             <p className="text-gray-400 text-base max-w-md pb-1 border-l-2 border-[#D4E868]/30 pl-4">
-                We are building a sustainable future by connecting people with surplus food.
+                Chúng tôi đang kiến tạo tương lai bền vững bằng cách kết nối cộng đồng với nguồn thực phẩm dư thừa giá trị.
             </p>
         </div>
 

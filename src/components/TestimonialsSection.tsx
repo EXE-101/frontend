@@ -2,43 +2,44 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import { Star, Quote, ArrowLeft, ArrowRight } from 'lucide-react';
 
 // --- DATA (FULL ENGLISH) ---
 const testimonials = [
   {
     id: 1,
-    quote: "LastBite saved me over $100 a month! Great quality food at a much lower price. I'm extremely satisfied with the service.",
+    quote: "LASTBITE giúp tôi tiết kiệm hơn 100 USD mỗi tháng. Thực phẩm vẫn ngon, sạch mà giá lại mềm, tôi rất hài lòng.",
     name: 'Nguyen Minh Anh',
-    designation: 'Student, FPT University',
+    designation: 'Sinh viên, Đại học FPT',
     src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3540&auto=format&fit=crop',
   },
   {
     id: 2,
-    quote: "As a busy professional, LastBite is the perfect solution. Pre-order, quick pickup, reasonable price. Plus, it helps reduce waste!",
+    quote: "Lịch làm việc bận rộn nhưng LASTBITE giúp tôi đặt trước, ghé nhận nhanh và vẫn hưởng giá ưu đãi. Lại còn giảm lãng phí nữa!",
     name: 'Tran Van Khoa',
-    designation: 'Marketing Manager',
+    designation: 'Trưởng phòng Marketing',
     src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=3540&auto=format&fit=crop',
   },
   {
     id: 3,
-    quote: "My bakery reduced daily waste by 40%. We increased revenue and attracted new customers. Simply amazing!",
+    quote: "Tiệm bánh của tôi giảm 40% lượng hàng tồn mỗi ngày, doanh thu tăng và có thêm khách mới. Thật sự ấn tượng!",
     name: 'Le Thi Huong',
-    designation: 'Owner, Sweet Dreams Bakery',
+    designation: 'Chủ tiệm Sweet Dreams Bakery',
     src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop',
   },
   {
     id: 4,
-    quote: "I love the concept of reducing food waste. Each Surprise Bag is a meaningful surprise for the whole family.",
+    quote: "Tôi rất thích ý tưởng giảm lãng phí thực phẩm. Mỗi Surprise Bag đều là món quà bất ngờ cho cả gia đình.",
     name: 'Pham Hoang Nam',
-    designation: 'Software Engineer',
+    designation: 'Kỹ sư phần mềm',
     src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=3540&auto=format&fit=crop',
   },
   {
     id: 5,
-    quote: "LastBite helps our supermarket optimize end-of-day inventory. It's a win-win solution for both business and customers.",
+    quote: "LASTBITE giúp siêu thị của chúng tôi tối ưu tồn kho cuối ngày. Giải pháp đôi bên cùng có lợi cho doanh nghiệp và khách hàng.",
     name: 'Vo Minh Tuan',
-    designation: 'Manager, CoopMart',
+    designation: 'Quản lý, CoopMart',
     src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=3540&auto=format&fit=crop',
   },
 ];
@@ -86,10 +87,10 @@ export function TestimonialsSection() {
         {/* HEADER */}
         <div className="text-center mb-16 md:mb-20">
           <h2 className="text-4xl md:text-5xl font-extrabold text-primary mb-6 tracking-tight">
-            What Our Users Say
+            Người dùng nói gì về LASTBITE
           </h2>
           <p className="text-foreground/60 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Thousands of people trust and use LastBite every day to save money and the planet.
+            Hàng nghìn người tin dùng LASTBITE mỗi ngày để vừa tiết kiệm chi phí vừa bảo vệ hành tinh.
           </p>
         </div>
 
@@ -126,10 +127,13 @@ export function TestimonialsSection() {
                         boxShadow: isActive ? "0 20px 50px -12px rgba(0, 0, 0, 0.25)" : "none" 
                     }}
                   >
-                    <img 
+                    <Image 
                       src={testimonial.src} 
                       alt={testimonial.name} 
-                      className="w-full h-full object-cover"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 80vw, 420px"
+                      priority={index === active}
                     />
                   </motion.div>
                 );
@@ -183,14 +187,14 @@ export function TestimonialsSection() {
                 <button 
                     onClick={handlePrev}
                     className="group p-4 rounded-full border border-primary/10 hover:bg-primary hover:text-white transition-all duration-300"
-                    aria-label="Previous testimonial"
+                    aria-label="Xem phản hồi trước"
                 >
                     <ArrowLeft className="w-6 h-6 text-primary group-hover:text-white" />
                 </button>
                 <button 
                     onClick={handleNext}
                     className="group p-4 rounded-full border border-primary/10 hover:bg-primary hover:text-white transition-all duration-300"
-                    aria-label="Next testimonial"
+                    aria-label="Xem phản hồi tiếp theo"
                 >
                     <ArrowRight className="w-6 h-6 text-primary group-hover:text-white" />
                 </button>

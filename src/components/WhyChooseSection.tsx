@@ -8,32 +8,32 @@ const featuresMediaItems: MediaItemType[] = [
   {
     id: 1,
     type: "image",
-    title: "Save 70%",
-    desc: "Real value, tiny price",
+    title: "Tiết kiệm 70%",
+    desc: "Giá trị thật, chi phí nhỏ",
     url: "https://images.unsplash.com/photo-1579631542720-3a87824fff86?q=80&w=1000&auto=format&fit=crop",
     span: "md:col-span-2 md:row-span-2 sm:col-span-2 sm:row-span-2 h-64 md:h-full",
   },
   {
     id: 2,
     type: "image",
-    title: "Top Quality",
-    desc: "Fresh everyday",
+    title: "Chất lượng hàng đầu",
+    desc: "Tươi mới mỗi ngày",
     url: "https://images.unsplash.com/photo-1556910103-1c02745a30bf?q=80&w=1000&auto=format&fit=crop",
     span: "md:col-span-1 md:row-span-1 sm:col-span-1 sm:row-span-1 h-32 md:h-full",
   },
   {
     id: 3,
     type: "video",
-    title: "Eco-Friendly",
-    desc: "Green mission",
+    title: "Sống xanh",
+    desc: "Sứ mệnh bền vững",
     url: "https://cdn.pixabay.com/video/2021/08/04/83896-583522300_large.mp4",
     span: "md:col-span-1 md:row-span-2 sm:col-span-1 sm:row-span-2 h-64 md:h-full",
   },
   {
     id: 4,
     type: "image",
-    title: "Community",
-    desc: "Connect & Share",
+    title: "Cộng đồng",
+    desc: "Kết nối & sẻ chia",
     url: "https://images.unsplash.com/photo-1529333166437-7750a6dd5a70?q=80&w=1000&auto=format&fit=crop",
     span: "md:col-span-1 md:row-span-1 sm:col-span-1 sm:row-span-1 h-32 md:h-full",
   },
@@ -41,15 +41,15 @@ const featuresMediaItems: MediaItemType[] = [
     id: 5,
     type: "image",
     title: "Surprise Bag",
-    desc: "Unbox the joy",
+    desc: "Mở túi đầy niềm vui",
     url: "https://images.unsplash.com/photo-1595246140625-573b715d11dc?q=80&w=1000&auto=format&fit=crop",
     span: "md:col-span-2 md:row-span-1 sm:col-span-2 sm:row-span-1 h-32 md:h-full",
   },
 ];
 
 const categories = [
-  'ARTISAN BREAD', 'ORGANIC FRUITS', 'SUSHI SETS', 'GOURMET PASTRIES', 'FRESH SALADS',
-  'POKE BOWLS', 'HANDCRAFTED BURGERS', 'COLD PRESSED JUICE', 'ARTISAN BREAD', 'ORGANIC FRUITS'
+  'BÁNH THỦ CÔNG', 'TRÁI CÂY HỮU CƠ', 'COMBO SUSHI', 'BÁNH NGỌT THƯỢNG HẠNG', 'SALAD TƯƠI',
+  'POKE BOWL', 'BURGER THỦ CÔNG', 'NƯỚC ÉP LẠNH', 'BÁNH THỦ CÔNG', 'TRÁI CÂY HỮU CƠ'
 ];
 
 export function WhyChooseSection() {
@@ -67,15 +67,15 @@ export function WhyChooseSection() {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#004d40]/20 bg-white/50 text-[#004d40] text-xs font-bold tracking-wider uppercase mb-4 shadow-sm backdrop-blur-sm">
               <Sparkles className="w-3 h-3 text-[#FF7F7F]" />
-              Why Choose LastBite?
+              Vì sao chọn LASTBITE?
             </div>
             <h2 className="text-4xl md:text-5xl font-bold text-[#004d40] tracking-tight leading-tight">
-              Saving food has never <br/>
-              <span className="text-[#FF7F7F]">looked this good.</span>
+              Cứu đồ ăn chưa bao giờ <br/>
+              <span className="text-[#FF7F7F]">đẹp đến thế.</span>
             </h2>
           </div>
           <p className="text-[#004d40]/70 text-lg max-w-md leading-relaxed font-medium border-l-2 border-[#FF7F7F] pl-6">
-            We don&apos;t just sell food. We are building a new lifestyle: Smart, Sustainable, and Savory.
+            Chúng tôi không chỉ bán thực phẩm. LASTBITE đang kiến tạo một lối sống mới: thông minh, bền vững và đầy hương vị.
           </p>
         </div>
 
@@ -87,10 +87,10 @@ export function WhyChooseSection() {
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16 border-t border-[#004d40]/10 pt-10">
           {[
-            { label: 'Community', value: '50K+' },
-            { label: 'Partners', value: '200+' },
-            { label: 'Meals Saved', value: '100K' },
-            { label: 'Savings', value: '70%' },
+            { label: 'Thành viên', value: '50K+' },
+            { label: 'Đối tác', value: '200+' },
+            { label: 'Bữa ăn được cứu', value: '100K' },
+            { label: 'Mức tiết kiệm', value: '70%' },
           ].map((stat, idx) => (
             <div key={idx} className="flex flex-col">
               <span className="text-3xl md:text-4xl font-bold text-[#004d40]">{stat.value}</span>

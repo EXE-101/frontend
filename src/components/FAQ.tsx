@@ -10,39 +10,39 @@ import {
 const faqs = [
   {
     id: 'item-1',
-    question: 'What time should I arrive to pick up my bag?',
+    question: 'Tôi nên đến nhận Surprise Bag vào lúc nào?',
     answer:
-      'You should arrive within the pickup time window specified in the app for each Surprise Bag. The store staff will be ready during this time to hand you your bag. We recommend arriving 5-10 minutes before the end of the window to avoid missing out.',
+      'Hãy đến trong khung giờ nhận được chỉ định cho từng Surprise Bag trên ứng dụng. Nhân viên cửa hàng sẽ sẵn sàng bàn giao túi cho bạn trong khoảng thời gian đó. Tốt nhất bạn nên có mặt sớm hơn 5-10 phút để không bị lỡ lượt.',
   },
   {
     id: 'item-2',
-    question: 'What if I have allergies or dietary restrictions?',
+    question: 'Nếu tôi bị dị ứng hoặc có chế độ ăn đặc biệt thì sao?',
     answer:
-      'Before reserving a Surprise Bag, you can view information about the store and read reviews from other customers. However, the exact contents of Surprise Bags are a surprise! We recommend checking with the store staff about major allergens when you pick up your bag.',
+      'Trước khi đặt túi, bạn có thể xem thông tin cửa hàng và đọc đánh giá từ người dùng khác. Tuy nhiên, nội dung Surprise Bag luôn là điều bất ngờ. Khi nhận túi, hãy hỏi nhanh nhân viên về các thành phần dễ gây dị ứng để yên tâm thưởng thức.',
   },
   {
     id: 'item-3',
-    question: 'Can I cancel my reservation?',
+    question: 'Tôi có thể hủy đơn đã đặt không?',
     answer:
-      'Yes, you can cancel your reservation through the Too Good To Go app. However, cancellations made close to the pickup time or after the time window has started cannot be refunded. Try to cancel as early as possible to receive your refund.',
+      'Bạn hoàn toàn có thể hủy đơn ngay trên ứng dụng LASTBITE. Lưu ý những lượt hủy sát giờ nhận hoặc sau khi khung giờ bắt đầu sẽ không được hoàn tiền. Hãy thực hiện càng sớm càng tốt để nhận lại khoản thanh toán.',
   },
   {
     id: 'item-4',
-    question: 'What payment methods are accepted?',
+    question: 'LASTBITE hỗ trợ những phương thức thanh toán nào?',
     answer:
-      'The Too Good To Go app accepts various payment methods including credit cards, debit cards, digital wallets, and other region-specific payment options. Payment is made through the app at the time of reservation.',
+      'Ứng dụng hỗ trợ thẻ tín dụng, thẻ ghi nợ, ví điện tử và các phương thức nội địa phù hợp từng khu vực. Bạn thanh toán trực tiếp trong ứng dụng ngay khi đặt túi.',
   },
   {
     id: 'item-5',
-    question: 'Is there a limit to how many bags I can reserve?',
+    question: 'Tôi được đặt tối đa bao nhiêu Surprise Bag?',
     answer:
-      'While you can reserve multiple bags from different stores, each Surprise Bag listing may have a limit on the number available. This is shown in the app. Some stores may also have reservation limits per customer.',
+      'Bạn có thể đặt nhiều túi từ các cửa hàng khác nhau, nhưng mỗi suất đều có giới hạn cụ thể hiển thị trong ứng dụng. Một số đối tác còn đặt hạn mức trên mỗi khách để bảo đảm công bằng cho cộng đồng.',
   },
   {
     id: 'item-6',
-    question: 'What should I bring when picking up my bag?',
+    question: 'Khi đến nhận túi tôi cần mang theo gì?',
     answer:
-      'You only need to bring your Too Good To Go app with you! Have it ready on your phone so you can swipe the slider to confirm your reservation when you arrive at the store.',
+      'Chỉ cần mang theo điện thoại có ứng dụng LASTBITE! Hãy mở sẵn màn hình xác nhận để trượt nút và hoàn tất việc bàn giao ngay tại cửa hàng.',
   },
 ];
 
@@ -59,13 +59,13 @@ export function FAQ() {
         {/* Header Section */}
         <div className="space-y-6 mb-16 text-center">
           <span className="text-[#D4E868] font-bold tracking-[0.2em] uppercase text-xs block mb-2">
-             Support Center
+             Trung tâm hỗ trợ
           </span>
           <h2 className="text-4xl md:text-5xl font-black text-[#FFF5E1] text-balance tracking-tight">
-            Frequently Asked Questions
+            Câu hỏi thường gặp
           </h2>
           <p className="text-[#FFF5E1] text-lg max-w-2xl mx-auto leading-relaxed">
-            Everything you need to know about collecting your Surprise Bag and using the app.
+            Tất cả thông tin bạn cần để đặt, nhận và sử dụng Surprise Bag trên ứng dụng LASTBITE.
           </p>
         </div>
 

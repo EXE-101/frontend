@@ -5,20 +5,6 @@ import Link from 'next/link';
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 import { Typewriter } from "@/components/ui/typewriter-text";
 
-// Helper to parse 'rgb(r, g, b)' or 'rgba(r, g, b, a)' string to {r, g, b}
-const parseRgbColor = (colorString: string) => {
-    if (!colorString) return null;
-    const match = colorString.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*[\d.]+)?\)/);
-    if (match) {
-        return {
-            r: parseInt(match[1], 10),
-            g: parseInt(match[2], 10),
-            b: parseInt(match[3], 10),
-        };
-    }
-    return null;
-};
-
 export default function WarpShaderHero() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const targetRef = useRef<HTMLButtonElement>(null);
@@ -202,9 +188,9 @@ export default function WarpShaderHero() {
           <h2 className="text-white text-2xl md:text-4xl font-semibold tracking-tight">
             <Typewriter
               text={[
-                "Join the movement to reduce food waste",
-                "Get amazing deals on quality food",
-                "Help make a difference in your community"
+                "Chung tay giảm lãng phí thực phẩm",
+                "Săn ưu đãi thực phẩm chất lượng",
+                "Lan tỏa khác biệt cho cộng đồng"
               ]}
               speed={80}
               deleteSpeed={40}
@@ -215,7 +201,7 @@ export default function WarpShaderHero() {
           </h2>
           
           <p className="text-white/85 text-lg md:text-xl font-light leading-relaxed max-w-3xl mx-auto">
-            Get amazing deals on quality food and help make a difference in your community.
+            Săn phần ăn chất lượng với giá ưu đãi và góp phần tạo nên một cộng đồng bền vững hơn.
           </p>
 
           <div className="relative pt-8 overflow-hidden">
@@ -232,11 +218,11 @@ export default function WarpShaderHero() {
               // THAY ĐỔI: Đổi màu chữ text-[...] thành text-[#003D33]
               className="px-10 py-4 bg-white text-[#003D33] font-bold rounded-full hover:bg-white/95 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
             >
-              Get Started
+              Bắt đầu ngay
             </button>
           </Link>
           <button className="px-10 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-full text-white font-semibold hover:bg-white/20 hover:border-white/50 transition-all duration-300 hover:scale-105">
-            Learn More
+            Tìm hiểu thêm
           </button>
         </div>
       </div>

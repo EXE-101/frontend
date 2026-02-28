@@ -2,7 +2,8 @@
 
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useEffect, useState } from 'react';
+import Image from 'next/image';
+import { useCallback, useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 
 type Testimonial = {
@@ -23,13 +24,13 @@ export const AnimatedTestimonials = ({
 }) => {
   const [active, setActive] = useState(0);
 
-  const handleNext = () => {
+  const handleNext = useCallback(() => {
     setActive((prev) => (prev + 1) % testimonials.length);
-  };
+  }, [testimonials.length]);
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     setActive((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+  }, [testimonials.length]);
 
   const isActive = (index: number) => {
     return index === active;
@@ -40,7 +41,7 @@ export const AnimatedTestimonials = ({
       const interval = setInterval(handleNext, 5000);
       return () => clearInterval(interval);
     }
-  }, [autoplay]);
+  }, [autoplay, handleNext]);
 
   // Hàm tính góc xoay giả ngẫu nhiên dựa trên index
   // Kết quả sẽ luôn cố định với mỗi ảnh, nhưng nhìn thì có vẻ ngẫu nhiên
@@ -95,14 +96,17 @@ export const AnimatedTestimonials = ({
                   }}
                   className="absolute inset-0 origin-bottom"
                 >
-                  <img
-                    src={testimonial.src}
-                    alt={testimonial.name}
-                    width={500}
-                    height={500}
-                    draggable={false}
-                    className="h-full w-full rounded-3xl object-cover object-center"
-                  />
+                  <div className="relative h-full w-full">
+                    <Image
+                      src={testimonial.src}
+                      alt={testimonial.name}
+                      fill
+                      className="rounded-3xl object-cover object-center"
+                      sizes="(max-width: 768px) 90vw, 460px"
+                      draggable={false}
+                      priority={isActive(index)}
+                    />
+                  </div>
                 </motion.div>
               ))}
             </AnimatePresence>

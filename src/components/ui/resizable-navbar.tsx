@@ -9,7 +9,7 @@ import {
 } from 'framer-motion';
 import Image from 'next/image';
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef, useState } from 'react';
 import { MenuItem } from './minimal-tiptap/menu-item';
 import Link from 'next/link';
 import { useTheme } from 'next-themes';
@@ -261,11 +261,7 @@ export const MobileNavToggle = ({
 
 export const NavbarLogo = () => {
     const { resolvedTheme } = useTheme();
-    const [mounted, setMounted] = useState(false);
-
-    // useEffect(() => {
-    //     setMounted(true);
-    // }, []);
+    const [mounted] = useState(() => typeof window !== 'undefined');
 
     if (!mounted) {
         return (
@@ -288,12 +284,12 @@ export const NavbarLogo = () => {
         >
             <Image
                 src={!isDark ? '/logo-dark.png' : '/logo-white.png'}
-                alt="BandUp Logo"
+                alt="Logo LASTBITE"
                 width={45}
                 height={45}
             />
             <span className="text-lg font-bold text-neutral-900 dark:text-white">
-                BandUp
+                LASTBITE
             </span>
         </Link>
     );

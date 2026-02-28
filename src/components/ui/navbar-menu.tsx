@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { motion, Transition } from "framer-motion"; // Import type Transition
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 

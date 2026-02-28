@@ -15,36 +15,36 @@ export function Navbar() {
           {/* Logo */}
           <Link href="/" className="flex-shrink-0 flex items-center gap-2">
             <div className="w-8 h-8 rounded-full bg-primary-foreground flex items-center justify-center font-bold text-primary text-sm">
-              TG
+              LB
             </div>
             <span className="text-primary-foreground font-bold text-lg hidden sm:inline">
-              Too Good To Go
+              LASTBITE
             </span>
           </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             <Link href="#" className="text-primary-foreground hover:opacity-80 transition text-sm font-medium">
-              THE APP
+              ỨNG DỤNG
             </Link>
             <Link href="#" className="text-primary-foreground hover:opacity-80 transition text-sm font-medium">
-              BUSINESS SOLUTIONS
+              GIẢI PHÁP DOANH NGHIỆP
             </Link>
             <Link href="#" className="text-primary-foreground hover:opacity-80 transition text-sm font-medium">
-              ABOUT US
+              VỀ CHÚNG TÔI
             </Link>
             <Link href="#" className="text-primary-foreground hover:opacity-80 transition text-sm font-medium">
-              ABOUT FOOD WASTE
+              HIỂU VỀ LÃNG PHÍ THỰC PHẨM
             </Link>
           </div>
 
           {/* Desktop Actions */}
           <div className="hidden md:flex items-center gap-4">
             <Button variant="ghost" className="text-primary-foreground hover:bg-primary-foreground/10">
-              Login
+              Đăng nhập
             </Button>
             <Button className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 rounded-full px-6">
-              Sign Up
+              Tạo tài khoản
             </Button>
           </div>
 
@@ -61,23 +61,23 @@ export function Navbar() {
         {isOpen && (
           <div className="md:hidden pb-4 space-y-2">
             <Link href="#" className="block text-primary-foreground hover:opacity-80 py-2">
-              THE APP
+              ỨNG DỤNG
             </Link>
             <Link href="#" className="block text-primary-foreground hover:opacity-80 py-2">
-              BUSINESS SOLUTIONS
+              GIẢI PHÁP DOANH NGHIỆP
             </Link>
             <Link href="#" className="block text-primary-foreground hover:opacity-80 py-2">
-              ABOUT US
+              VỀ CHÚNG TÔI
             </Link>
             <Link href="#" className="block text-primary-foreground hover:opacity-80 py-2">
-              ABOUT FOOD WASTE
+              HIỂU VỀ LÃNG PHÍ THỰC PHẨM
             </Link>
             <div className="pt-4 flex gap-2">
               <Button variant="ghost" className="flex-1 text-primary-foreground">
-                Login
+                Đăng nhập
               </Button>
               <Button className="flex-1 bg-primary-foreground text-primary">
-                Sign Up
+                Tạo tài khoản
               </Button>
             </div>
           </div>

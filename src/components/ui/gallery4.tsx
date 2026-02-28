@@ -1,6 +1,7 @@
 'use client';
 
 import { ArrowLeft, ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 import { Button } from '@/components/ui/button';
@@ -26,8 +27,8 @@ export interface Gallery4Props {
 }
 
 const Gallery4 = ({
-  title = 'Case Studies',
-  description = 'Discover how leading companies and developers are leveraging modern web technologies to build exceptional digital experiences.',
+  title = 'Câu chuyện thành công',
+  description = 'Khám phá cách các doanh nghiệp và nhà phát triển ứng dụng công nghệ web hiện đại để tạo nên trải nghiệm số xuất sắc.',
   items,
 }: Gallery4Props) => {
   const [carouselApi, setCarouselApi] = useState<CarouselApi>();
@@ -106,10 +107,12 @@ const Gallery4 = ({
               >
                 <a href={item.href} className="group rounded-xl">
                   <div className="group relative h-full min-h-[27rem] max-w-full overflow-hidden rounded-xl md:aspect-[5/4] lg:aspect-[16/9]">
-                    <img
+                    <Image
                       src={item.image}
                       alt={item.title}
-                      className="absolute h-full w-full object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                      fill
+                      className="object-cover object-center transition-transform duration-300 group-hover:scale-105"
+                      sizes="(max-width: 768px) 90vw, 420px"
                     />
                     <div className="absolute inset-0 h-full bg-[linear-gradient(hsl(var(--primary)/0),hsl(var(--primary)/0.4),hsl(var(--primary)/0.8)_100%)] mix-blend-multiply" />
                     <div className="absolute inset-x-0 bottom-0 flex flex-col items-start p-6 text-primary-foreground md:p-8">
@@ -138,7 +141,7 @@ const Gallery4 = ({
                 currentSlide === index ? 'bg-primary' : 'bg-primary/20'
               }`}
               onClick={() => carouselApi?.scrollTo(index)}
-              aria-label={`Go to slide ${index + 1}`}
+              aria-label={`Chuyển đến slide ${index + 1}`}
             />
           ))}
         </div>

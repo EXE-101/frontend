@@ -4,6 +4,24 @@ import { motion } from "motion/react";
 import { twMerge } from "tailwind-merge";
 import { cn } from "@/lib/utils";
 
+type StarConfig = {
+  top: number;
+  left: number;
+  moveX: number;
+  moveY: number;
+  opacity: number;
+  duration: number;
+};
+
+const STAR_CONFIGS: StarConfig[] = Array.from({ length: 80 }, () => ({
+  top: Math.random() * 100,
+  left: Math.random() * 100,
+  moveX: Math.random() * 4 - 2,
+  moveY: Math.random() * 4 - 2,
+  opacity: Math.random(),
+  duration: Math.random() * 10 + 20,
+}));
+
 export const TextRevealCard = ({
   text,
   revealText,
@@ -16,7 +34,7 @@ export const TextRevealCard = ({
   className?: string;
 }) => {
   const [widthPercentage, setWidthPercentage] = useState(0);
-  const cardRef = useRef<HTMLDivElement | any>(null);
+  const cardRef = useRef<HTMLDivElement | null>(null);
   const [left, setLeft] = useState(0);
   const [localWidth, setLocalWidth] = useState(0);
   const [isMouseOver, setIsMouseOver] = useState(false);
@@ -30,7 +48,7 @@ export const TextRevealCard = ({
     }
   }, []);
 
-  function mouseMoveHandler(event: any) {
+  function mouseMoveHandler(event: React.MouseEvent<HTMLDivElement>) {
     event.preventDefault();
 
     const { clientX } = event;
@@ -148,29 +166,26 @@ export const TextRevealCardDescription = ({
 };
 
 const Stars = () => {
-  const randomMove = () => Math.random() * 4 - 2;
-  const randomOpacity = () => Math.random();
-  const random = () => Math.random();
   return (
     <div className="absolute inset-0">
-      {[...Array(80)].map((_, i) => (
+      {STAR_CONFIGS.map((config, i) => (
         <motion.span
           key={`star-${i}`}
           animate={{
-            top: `calc(${random() * 100}% + ${randomMove()}px)`,
-            left: `calc(${random() * 100}% + ${randomMove()}px)`,
-            opacity: randomOpacity(),
+            top: `calc(${config.top}% + ${config.moveY}px)`,
+            left: `calc(${config.left}% + ${config.moveX}px)`,
+            opacity: config.opacity,
             scale: [1, 1.2, 0],
           }}
           transition={{
-            duration: random() * 10 + 20,
+            duration: config.duration,
             repeat: Infinity,
             ease: "linear",
           }}
           style={{
             position: "absolute",
-            top: `${random() * 100}%`,
-            left: `${random() * 100}%`,
+            top: `${config.top}%`,
+            left: `${config.left}%`,
             width: `2px`,
             height: `2px`,
             backgroundColor: "white",

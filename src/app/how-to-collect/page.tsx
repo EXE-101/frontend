@@ -9,8 +9,8 @@ import { FAQ } from '@/components/FAQ';
 import { Footer } from '@/components/Footer';
 
 export const metadata = {
-  title: 'LastBite - Save the Last. Share the Good.',
-  description: 'Kết nối thực phẩm dư thừa với người tiêu dùng, giảm lãng phí, lan tỏa giá trị bền vững.',
+  title: 'LASTBITE - Cách nhận túi cứu đồ ăn',
+  description: 'Cẩm nang từng bước để đặt, nhận và tận hưởng Surprise Bag từ LASTBITE một cách nhanh chóng, chuẩn chỉnh.',
 };
 
 export default function Home() {

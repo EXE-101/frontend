@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useCallback, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { Download, PlayCircle } from "lucide-react";
 // import { cn } from "@/lib/utils"; // Giữ nguyên import nếu bạn có file utils
 
@@ -44,10 +45,10 @@ const TextFlip = ({ words }: { words: string[] }) => {
 };
 
 export function LastBiteHero({
-  heading = "Save the Last.",
-  subheading = "Connect surplus food with people who care. Reduce waste, save money, and help the planet—one meal at a time.",
-  badgeText = "#1 Anti-Waste Community",
-  ctaText = "Download App",
+  heading = "Giữ trọn phần ngon cuối.",
+  subheading = "LASTBITE kết nối thực phẩm dư thừa với cộng đồng yêu bền vững, vừa tiết kiệm chi phí vừa bảo vệ hành tinh.",
+  badgeText = "Cộng đồng chống lãng phí số 1",
+  ctaText = "Tải ứng dụng",
   backgroundImageUrl = "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop",
 }: LastBiteHeroProps) {
   
@@ -163,10 +164,13 @@ export function LastBiteHero({
     >
       {/* --- BACKGROUND IMAGE LAYER --- */}
       <div className="absolute inset-0 z-0">
-        <img 
+        <Image 
             src={backgroundImageUrl} 
-            alt="Background" 
-            className="w-full h-full object-cover"
+            alt="Phần nền" 
+            fill
+            priority
+            className="object-cover"
+            sizes="100vw"
         />
         {/* Overlay giữ nguyên */}
         <div className="absolute inset-0 bg-black/60 bg-gradient-to-b from-black/70 via-black/50 to-black/80" />
@@ -196,8 +200,8 @@ export function LastBiteHero({
         <h1 className="flex flex-col items-center justify-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#FFF5E1] mb-6 drop-shadow-2xl leading-[1.1]">
             <span className="block">{heading}</span>
             <span className="flex items-center mt-1 sm:mt-2">
-                Share the 
-                <TextFlip words={["Good", "Future", "Taste", "Planet"]} />
+                Lan tỏa 
+                <TextFlip words={["điều tốt", "hy vọng", "hương vị", "hành tinh xanh"]} />
             </span>
         </h1>
 
@@ -219,7 +223,7 @@ export function LastBiteHero({
             </button>
             
             <button className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-[#FFF5E1] border border-white/30 rounded-full hover:bg-white/10 backdrop-blur-sm transition-colors group">
-                How it works 
+                Xem quy trình 
                 {/* THAY ĐỔI: Hover icon màu xanh đầm */}
                 <PlayCircle className="w-5 h-5 ml-2 group-hover:text-emerald-500 transition-colors" />
             </button>
@@ -230,11 +234,11 @@ export function LastBiteHero({
              <div className="flex -space-x-3">
                  {[1,2,3,4].map(i => (
                      <div key={i} className="w-10 h-10 rounded-full border-2 border-black/50 overflow-hidden">
-                         <img src={`https://i.pravatar.cc/100?img=${i+10}`} alt="User" className="w-full h-full object-cover" />
+                         <Image src={`https://i.pravatar.cc/100?img=${i+10}`} alt="Thành viên cộng đồng" width={40} height={40} className="object-cover" />
                      </div>
                  ))}
              </div>
-             <p>Joined by <strong>50,000+</strong> food savers</p>
+             <p>Hơn <strong>50.000</strong> người đang chung tay cứu thực phẩm</p>
         </div>
 
       </div>

@@ -87,19 +87,19 @@ export function ProblemSection() {
             >
               {/* Badge nhỏ màu Kem */}
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFF5E1] text-[#004d40] text-xs font-bold tracking-widest uppercase mb-6 shadow-lg">
-                The Reality
+                Thực trạng
               </div>
               
               <h2 className="text-4xl md:text-5xl font-bold text-[#FFF5E1] mb-6 leading-[1.15]">
-                Food waste is the <br/>
-                <span className="text-[#FFF5E1]/50">invisible crisis.</span>
+                Lãng phí thực phẩm là <br/>
+                <span className="text-[#FFF5E1]/50">cuộc khủng hoảng vô hình.</span>
               </h2>
             </motion.div>
 
             {/* MagicText: Hiệu ứng lướt chữ bạn yêu cầu */}
             <div className="text-lg md:text-xl text-[#FFF5E1]/80 leading-relaxed font-light">
               <MagicText 
-                text="Every year, Vietnam wastes over 8 million tons of food, causing $3.9 billion in damages. In HCMC alone, nearly 8,000 tons of food waste daily release methane gas, fueling climate change. LastBite was born to change this narrative—turning waste into value."
+                text="Mỗi năm Việt Nam lãng phí hơn 8 triệu tấn thực phẩm, gây tổn thất khoảng 3,9 tỷ USD. Riêng TP.HCM thải ra gần 8.000 tấn rác thực phẩm mỗi ngày, tạo ra khí metan thúc đẩy biến đổi khí hậu. LASTBITE ra đời để viết lại câu chuyện ấy: biến lãng phí thành giá trị."
                 className="block"
               />
             </div>
@@ -112,7 +112,7 @@ export function ProblemSection() {
                className="pt-4"
             >
                <button className="group flex items-center gap-2 text-[#FFF5E1] font-bold border-b-2 border-[#FFF5E1] pb-1 hover:text-[#FFF5E1]/80 transition-all">
-                  See the full impact report <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform"/>
+                  Xem toàn bộ báo cáo tác động <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform"/>
                </button>
             </motion.div>
           </div>
@@ -121,20 +121,20 @@ export function ProblemSection() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <StatCard 
               icon={Trash2}
-              value="8.8M Tons"
-              label="Of food is wasted annually in Vietnam alone."
+              value="8,8 triệu tấn"
+              label="Thực phẩm bị lãng phí mỗi năm chỉ riêng tại Việt Nam."
               delay={0.2}
             />
             <StatCard 
               icon={TrendingDown}
-              value="$3.9 Billion"
-              label="Lost economic value every single year."
+              value="$3,9 tỷ"
+              label="Giá trị kinh tế bị thất thoát hằng năm."
               delay={0.3}
             />
             <StatCard 
               icon={CloudAlert}
-              value="8,000 Tons"
-              label="Daily food waste in HCMC, releasing harmful methane gas."
+              value="8.000 tấn"
+              label="Lượng rác thực phẩm mỗi ngày tại TP.HCM, thải ra khí metan độc hại."
               delay={0.4}
             />
             
@@ -146,8 +146,8 @@ export function ProblemSection() {
                 transition={{ duration: 0.5, delay: 0.5 }}
                 className="bg-[#FFF5E1] p-6 rounded-xl flex flex-col justify-center items-center text-center cursor-pointer shadow-xl hover:scale-[1.02] transition-transform"
               >
-                <h3 className="text-2xl font-bold text-[#004d40] mb-2">Join the Mission</h3>
-                <p className="text-[#004d40]/70 text-sm font-medium">Start saving today</p>
+                <h3 className="text-2xl font-bold text-[#004d40] mb-2">Cùng chung tay</h3>
+                <p className="text-[#004d40]/70 text-sm font-medium">Bắt đầu cứu đồ ăn ngay hôm nay</p>
               </motion.div>
           </div>
 
