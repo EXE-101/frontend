@@ -2,8 +2,8 @@
 
 /* Định nghĩa Theme cho Tailwind v4 */
 @theme {
-  --font-sans: 'Geist', 'Inter', sans-serif;
-  --font-mono: 'Geist Mono', 'Fira Code', monospace;
+  --font-sans: var(--font-brand-sans), 'Be Vietnam Pro', 'Inter', sans-serif;
+  --font-mono: var(--font-brand-mono), 'JetBrains Mono', 'Fira Code', monospace;
   
   /* Map các biến CSS vào Tailwind utility */
   --color-background: var(--background);

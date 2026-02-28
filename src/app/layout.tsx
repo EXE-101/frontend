@@ -1,16 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Be_Vietnam_Pro, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { SmoothScrolling } from "@/components/providers/smooth-scrolling";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const beVietnamPro = Be_Vietnam_Pro({
+  subsets: ["latin", "latin-ext", "vietnamese"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-brand-sans",
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const jetBrainsMono = JetBrains_Mono({
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600"],
+  variable: "--font-brand-mono",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -27,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${beVietnamPro.variable} ${jetBrainsMono.variable} antialiased`}
       >
        <SmoothScrolling>
           {children}

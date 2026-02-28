@@ -14,6 +14,10 @@ export const TextHoverEffect = ({
   const [cursor, setCursor] = useState({ x: 0, y: 0 });
   const [hovered, setHovered] = useState(false);
   const [maskPosition, setMaskPosition] = useState({ cx: "50%", cy: "50%" });
+  const brandFontStyle = {
+    fontFamily:
+      "var(--font-brand-sans), 'Be Vietnam Pro', 'Inter', sans-serif",
+  } as const;
 
   useEffect(() => {
     if (svgRef.current && cursor.x !== null && cursor.y !== null) {
@@ -87,8 +91,8 @@ export const TextHoverEffect = ({
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.5"
-        className="fill-transparent stroke-[#E0F2F1] font-[helvetica] text-7xl font-bold"
-        style={{ opacity: hovered ? 0.8 : 0.6 }}
+        className="fill-transparent stroke-[#E0F2F1] text-7xl font-bold font-sans"
+        style={{ ...brandFontStyle, opacity: hovered ? 0.8 : 0.6 }}
       >
         {text}
       </text>
@@ -100,7 +104,8 @@ export const TextHoverEffect = ({
         textAnchor="middle"
         dominantBaseline="middle"
         strokeWidth="0.5"
-        className="fill-transparent stroke-[#E0F2F1] font-[helvetica] text-7xl font-bold"
+        className="fill-transparent stroke-[#E0F2F1] text-7xl font-bold font-sans"
+        style={brandFontStyle}
         initial={{ strokeDashoffset: 1000, strokeDasharray: 1000 }}
         animate={{
           strokeDashoffset: 0,
@@ -123,7 +128,8 @@ export const TextHoverEffect = ({
         stroke="url(#textGradient)"
         strokeWidth="0.5"
         mask="url(#textMask)"
-        className="fill-transparent font-[helvetica] text-7xl font-bold"
+        className="fill-transparent text-7xl font-bold font-sans"
+        style={brandFontStyle}
       >
         {text}
       </text>
