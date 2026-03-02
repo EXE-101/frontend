@@ -18,7 +18,7 @@ const jetBrainsMono = JetBrains_Mono({
 });
 
 const sen = Sen({
-  subsets: ["latin", "latin-ext", "vietnamese"],
+  subsets: ["latin", "latin-ext"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-brand-display",
   display: "swap",
