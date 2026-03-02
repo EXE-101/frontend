@@ -3,6 +3,7 @@
 /* Định nghĩa Theme cho Tailwind v4 */
 @theme {
   --font-sans: var(--font-brand-sans), 'Be Vietnam Pro', 'Inter', sans-serif;
+  --font-display: var(--font-brand-display), var(--font-brand-sans), 'Be Vietnam Pro', 'Inter', sans-serif;
   --font-mono: var(--font-brand-mono), 'JetBrains Mono', 'Fira Code', monospace;
   
   /* Map các biến CSS vào Tailwind utility */
@@ -112,6 +113,9 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
   }
 }
 

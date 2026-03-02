@@ -25,16 +25,16 @@ export function Navbar() {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             <Link href="#" className="text-primary-foreground hover:opacity-80 transition text-sm font-medium">
-              ỨNG DỤNG
+              Ứng dụng
             </Link>
             <Link href="#" className="text-primary-foreground hover:opacity-80 transition text-sm font-medium">
-              GIẢI PHÁP DOANH NGHIỆP
+              Giải pháp cho đối tác
             </Link>
             <Link href="#" className="text-primary-foreground hover:opacity-80 transition text-sm font-medium">
-              VỀ CHÚNG TÔI
+              Về LASTBITE
             </Link>
             <Link href="#" className="text-primary-foreground hover:opacity-80 transition text-sm font-medium">
-              HIỂU VỀ LÃNG PHÍ THỰC PHẨM
+              Tìm hiểu về lãng phí thực phẩm
             </Link>
           </div>
 
@@ -44,7 +44,7 @@ export function Navbar() {
               Đăng nhập
             </Button>
             <Button className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 rounded-full px-6">
-              Tạo tài khoản
+              Mở tài khoản mới
             </Button>
           </div>
 
@@ -61,23 +61,23 @@ export function Navbar() {
         {isOpen && (
           <div className="md:hidden pb-4 space-y-2">
             <Link href="#" className="block text-primary-foreground hover:opacity-80 py-2">
-              ỨNG DỤNG
+              Ứng dụng
             </Link>
             <Link href="#" className="block text-primary-foreground hover:opacity-80 py-2">
-              GIẢI PHÁP DOANH NGHIỆP
+              Giải pháp cho đối tác
             </Link>
             <Link href="#" className="block text-primary-foreground hover:opacity-80 py-2">
-              VỀ CHÚNG TÔI
+              Về LASTBITE
             </Link>
             <Link href="#" className="block text-primary-foreground hover:opacity-80 py-2">
-              HIỂU VỀ LÃNG PHÍ THỰC PHẨM
+              Tìm hiểu về lãng phí thực phẩm
             </Link>
             <div className="pt-4 flex gap-2">
               <Button variant="ghost" className="flex-1 text-primary-foreground">
                 Đăng nhập
               </Button>
               <Button className="flex-1 bg-primary-foreground text-primary">
-                Tạo tài khoản
+                Mở tài khoản mới
               </Button>
             </div>
           </div>

@@ -51,7 +51,7 @@ export default function DisplayCards({ cards }: DisplayCardsProps) {
   const defaultCards: DisplayCardProps[] = [
     {
       icon: <ShoppingBag className="w-4 h-4 text-emerald-500" />,
-      title: 'Nhận hàng thật nhanh',
+      title: 'Nhận túi thật nhanh',
       description: 'Đặt và nhận chỉ trong vài phút',
       date: 'Sẵn sàng ngay',
       titleClassName: 'text-emerald-600 dark:text-emerald-400',
@@ -59,8 +59,8 @@ export default function DisplayCards({ cards }: DisplayCardsProps) {
     },
     {
       icon: <Sparkles className="w-4 h-4 text-blue-500" />,
-      title: 'Ưu đãi hấp dẫn',
-      description: 'Tiết kiệm đến 70% cho thực phẩm chất lượng',
+      title: 'Ưu đãi đậm đà',
+      description: 'Tiết kiệm đến 70% cho phần ngon chuẩn vị',
       date: 'Mỗi ngày',
       titleClassName: 'text-blue-600 dark:text-blue-400',
       className: 'translate-x-6 translate-y-4 hover:translate-y-2',

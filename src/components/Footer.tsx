@@ -15,7 +15,7 @@ export function Footer() {
               <span className="font-bold text-lg">LASTBITE</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              Giúp nhà hàng, tiệm bánh và cửa hàng bán thực phẩm dư thừa có lời, đồng thời giảm lãng phí cho cộng đồng.
+              Kết nối nhà hàng, tiệm bánh và cửa hàng để bán hết phần ngon cuối ngày, vừa có lời vừa giảm lãng phí cho cộng đồng.
             </p>
           </div>
 
@@ -23,16 +23,16 @@ export function Footer() {
           <div className="space-y-3">
             <h4 className="font-bold text-base mb-4">Về LASTBITE</h4>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition">
-              Câu chuyện thương hiệu
+              Hành trình thương hiệu
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
               Tác động bền vững
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Tuyển dụng
+              Gia nhập đội ngũ
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Bản tin
+              Đăng ký bản tin
             </Link>
           </div>
 
@@ -40,16 +40,16 @@ export function Footer() {
           <div className="space-y-3">
             <h4 className="font-bold text-base mb-4">Giải pháp cho đối tác</h4>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition">
-              Hợp tác cùng LASTBITE
+              Đăng ký hợp tác với LASTBITE
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Dành cho bán lẻ
+              Giải pháp cho bán lẻ
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
               Tài nguyên vận hành
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Bộ giải pháp thông minh
+              Gói giải pháp thông minh
             </Link>
           </div>
 
@@ -75,7 +75,7 @@ export function Footer() {
         <div className="border-t border-primary-foreground/20 py-8 space-y-6">
           {/* Social Links */}
           <div className="flex items-center gap-6">
-            <span className="text-sm font-semibold">Kết nối với chúng tôi</span>
+            <span className="text-sm font-semibold">Kết nối cùng LASTBITE</span>
             <div className="flex gap-4">
               <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition">
                 <Facebook size={20} />

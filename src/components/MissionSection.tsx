@@ -45,10 +45,10 @@ const TextFlip = ({ words }: { words: string[] }) => {
 };
 
 export function LastBiteHero({
-  heading = "Giữ trọn phần ngon cuối.",
-  subheading = "LASTBITE kết nối thực phẩm dư thừa với cộng đồng yêu bền vững, vừa tiết kiệm chi phí vừa bảo vệ hành tinh.",
-  badgeText = "Cộng đồng chống lãng phí số 1",
-  ctaText = "Tải ứng dụng",
+  heading = "Giữ trọn phần ngon cuối cùng.",
+  subheading = "LASTBITE kết nối phần dư chất lượng với những người trân trọng chúng, giúp bạn tiết kiệm và bảo vệ hành tinh.",
+  badgeText = "Cộng đồng tiên phong chống lãng phí",
+  ctaText = "Tải ứng dụng LASTBITE",
   backgroundImageUrl = "https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070&auto=format&fit=crop",
 }: LastBiteHeroProps) {
   
@@ -201,7 +201,7 @@ export function LastBiteHero({
             <span className="block">{heading}</span>
             <span className="flex items-center mt-1 sm:mt-2">
                 Lan tỏa 
-                <TextFlip words={["điều tốt", "hy vọng", "hương vị", "hành tinh xanh"]} />
+                <TextFlip words={["điều tốt", "hy vọng", "vị ngon", "một hành tinh xanh"]} />
             </span>
         </h1>
 
@@ -223,7 +223,7 @@ export function LastBiteHero({
             </button>
             
             <button className="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-[#FFF5E1] border border-white/30 rounded-full hover:bg-white/10 backdrop-blur-sm transition-colors group">
-                Xem quy trình 
+                Xem cách hoạt động 
                 {/* THAY ĐỔI: Hover icon màu xanh đầm */}
                 <PlayCircle className="w-5 h-5 ml-2 group-hover:text-emerald-500 transition-colors" />
             </button>
@@ -238,7 +238,7 @@ export function LastBiteHero({
                      </div>
                  ))}
              </div>
-             <p>Hơn <strong>50.000</strong> người đang chung tay cứu thực phẩm</p>
+             <p>Hơn <strong>50.000</strong> thành viên đang chung tay cứu thực phẩm mỗi ngày</p>
         </div>
 
       </div>

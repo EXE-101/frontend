@@ -9,8 +9,8 @@ interface HandWrittenTitleProps {
 }
 
 export function HandWrittenTitle({
-  title = 'Nét chữ viết tay',
-  subtitle = 'Phụ đề tùy chọn',
+  title = 'Chữ viết tay cảm xúc',
+  subtitle = 'Bạn có thể thay thế thông điệp phụ tại đây',
 }: HandWrittenTitleProps) {
   // 2. Khai báo kiểu ': Variants' cho biến draw
   const draw: Variants = {

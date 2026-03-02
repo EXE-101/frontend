@@ -10,36 +10,36 @@ const impactData = [
   {
     id: 'food-saved',
     icon: <Leaf className="w-6 h-6" />,
-    title: 'Cắt giảm lãng phí thực phẩm',
-    description: 'LASTBITE đã cứu hàng nghìn ki-lô-gam thực phẩm khỏi bị chôn lấp, giảm đáng kể tác động môi trường.',
+    title: 'Cứu thực phẩm khỏi lãng phí',
+    description: 'Hàng nghìn ki-lô-gam đồ ăn đã được giữ lại khỏi bãi chôn lấp, giảm phát thải đáng kể.',
     image: 'https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1080&auto=format&fit=crop',
   },
   {
     id: 'partners',
     icon: <Handshake className="w-6 h-6" />,
-    title: 'Đối tác tin cậy',
-    description: 'Đồng hành cùng hàng trăm siêu thị, tiệm bánh và cửa hàng uy tín.',
+    title: 'Mạng lưới đối tác tin cậy',
+    description: 'Đồng hành cùng hàng trăm siêu thị, tiệm bánh và cửa hàng uy tín trên khắp thành phố.',
     image: 'https://images.unsplash.com/photo-1556740758-90de374c12ad?q=80&w=1080&auto=format&fit=crop',
   },
   {
     id: 'community',
     icon: <Users className="w-6 h-6" />,
-    title: 'Cộng đồng bền vững',
-    description: 'Hơn 10.000 người dùng đã gia nhập LASTBITE để cùng nhau sống xanh.',
+    title: 'Cộng đồng sống xanh',
+    description: 'Hơn 10.000 thành viên chọn LASTBITE để cùng nhau lan tỏa lối sống xanh mỗi ngày.',
     image: 'https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=1080&auto=format&fit=crop',
   },
   {
     id: 'savings',
     icon: <PiggyBank className="w-6 h-6" />,
-    title: 'Tiết kiệm chi phí',
-    description: 'Người dùng tiết kiệm trung bình 50-70% chi phí ăn uống mỗi tháng, nâng tầm chất lượng sống.',
+    title: 'Tiết kiệm chi tiêu',
+    description: 'Người dùng tiết kiệm 50-70% chi phí ăn uống mỗi tháng mà vẫn giữ chất lượng.',
     image: 'https://images.unsplash.com/photo-1579621970795-87facc2f976d?q=80&w=1080&auto=format&fit=crop',
   },
   {
     id: 'technology',
     icon: <Zap className="w-6 h-6" />,
-    title: 'Công nghệ tiên tiến',
-    description: 'Nền tảng ứng dụng AI tối ưu kết nối cung - cầu để trải nghiệm luôn mượt mà.',
+    title: 'Công nghệ tối ưu trải nghiệm',
+    description: 'Nền tảng ứng dụng AI cân bằng cung - cầu nên việc đặt túi luôn mượt mà.',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1080&auto=format&fit=crop',
   },
 ];
@@ -135,7 +135,7 @@ export function ImpactSection() {
             </div>
             
             <p className="text-gray-400 text-base max-w-md pb-1 border-l-2 border-[#D4E868]/30 pl-4">
-                Chúng tôi đang kiến tạo tương lai bền vững bằng cách kết nối cộng đồng với nguồn thực phẩm dư thừa giá trị.
+                Chúng tôi kết nối cộng đồng với phần thực phẩm dư giá trị để tạo nên tương lai bền vững và nhân văn hơn.
             </p>
         </div>
 

@@ -10,39 +10,39 @@ import {
 const faqs = [
   {
     id: 'item-1',
-    question: 'Tôi nên đến nhận Surprise Bag vào lúc nào?',
+    question: 'Tôi nhận Surprise Bag vào thời điểm nào là phù hợp?',
     answer:
-      'Hãy đến trong khung giờ nhận được chỉ định cho từng Surprise Bag trên ứng dụng. Nhân viên cửa hàng sẽ sẵn sàng bàn giao túi cho bạn trong khoảng thời gian đó. Tốt nhất bạn nên có mặt sớm hơn 5-10 phút để không bị lỡ lượt.',
+      'Mỗi túi đều có khung giờ nhận hiển thị rõ trong ứng dụng. Bạn nên ghé sớm hơn 5-10 phút để nhân viên chuẩn bị và tránh lỡ lượt.',
   },
   {
     id: 'item-2',
-    question: 'Nếu tôi bị dị ứng hoặc có chế độ ăn đặc biệt thì sao?',
+    question: 'Nếu tôi bị dị ứng hoặc có chế độ ăn riêng thì sao?',
     answer:
-      'Trước khi đặt túi, bạn có thể xem thông tin cửa hàng và đọc đánh giá từ người dùng khác. Tuy nhiên, nội dung Surprise Bag luôn là điều bất ngờ. Khi nhận túi, hãy hỏi nhanh nhân viên về các thành phần dễ gây dị ứng để yên tâm thưởng thức.',
+      'Trước khi đặt, bạn hãy xem mô tả cửa hàng và đánh giá của cộng đồng. Nội dung túi vẫn là điều bất ngờ, nên khi nhận hãy hỏi nhanh nhân viên về các thành phần dễ gây dị ứng để yên tâm.',
   },
   {
     id: 'item-3',
     question: 'Tôi có thể hủy đơn đã đặt không?',
     answer:
-      'Bạn hoàn toàn có thể hủy đơn ngay trên ứng dụng LASTBITE. Lưu ý những lượt hủy sát giờ nhận hoặc sau khi khung giờ bắt đầu sẽ không được hoàn tiền. Hãy thực hiện càng sớm càng tốt để nhận lại khoản thanh toán.',
+      'Bạn có thể hủy đơn ngay trong ứng dụng LASTBITE. Những lượt hủy sát giờ nhận hoặc sau khi khung giờ bắt đầu sẽ không được hoàn tiền, vì vậy hãy thao tác càng sớm càng tốt.',
   },
   {
     id: 'item-4',
     question: 'LASTBITE hỗ trợ những phương thức thanh toán nào?',
     answer:
-      'Ứng dụng hỗ trợ thẻ tín dụng, thẻ ghi nợ, ví điện tử và các phương thức nội địa phù hợp từng khu vực. Bạn thanh toán trực tiếp trong ứng dụng ngay khi đặt túi.',
+      'Chúng tôi hỗ trợ thẻ tín dụng/ghi nợ, ví điện tử và các phương thức nội địa tùy khu vực. Bạn thanh toán trực tuyến ngay khi đặt túi để cửa hàng giữ phần ăn cho bạn.',
   },
   {
     id: 'item-5',
     question: 'Tôi được đặt tối đa bao nhiêu Surprise Bag?',
     answer:
-      'Bạn có thể đặt nhiều túi từ các cửa hàng khác nhau, nhưng mỗi suất đều có giới hạn cụ thể hiển thị trong ứng dụng. Một số đối tác còn đặt hạn mức trên mỗi khách để bảo đảm công bằng cho cộng đồng.',
+      'Bạn có thể đặt nhiều túi ở các cửa hàng khác nhau, nhưng mỗi đối tác sẽ có giới hạn riêng hiển thị trên ứng dụng để bảo đảm công bằng cho cộng đồng.',
   },
   {
     id: 'item-6',
     question: 'Khi đến nhận túi tôi cần mang theo gì?',
     answer:
-      'Chỉ cần mang theo điện thoại có ứng dụng LASTBITE! Hãy mở sẵn màn hình xác nhận để trượt nút và hoàn tất việc bàn giao ngay tại cửa hàng.',
+      'Chỉ cần mang theo điện thoại có ứng dụng LASTBITE và mở sẵn màn hình xác nhận. Nhân viên sẽ quét hoặc trượt nút là bạn hoàn tất.',
   },
 ];
 
@@ -65,7 +65,7 @@ export function FAQ() {
             Câu hỏi thường gặp
           </h2>
           <p className="text-[#FFF5E1] text-lg max-w-2xl mx-auto leading-relaxed">
-            Tất cả thông tin bạn cần để đặt, nhận và sử dụng Surprise Bag trên ứng dụng LASTBITE.
+            Những điều bạn cần biết để đặt, nhận và tận hưởng Surprise Bag trên ứng dụng LASTBITE.
           </p>
         </div>
 

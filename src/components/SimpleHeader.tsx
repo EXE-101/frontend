@@ -13,15 +13,15 @@ const NAV_ITEMS = [
     link: '/',
   },
   {
-    name: 'Cách nhận túi',
+    name: 'Hướng dẫn nhận túi',
     link: '/how-to-collect',
   },
   {
     name: 'Dịch vụ', // Ví dụ menu có submenu
     link: '#',
     submenu: [
-      { name: 'Cho đối tác', desc: 'Kết nối hợp tác bền vững', icon: '/business.png', href: '/business' },
-      { name: 'Cơ hội nghề nghiệp', desc: 'Gia nhập đội ngũ LASTBITE', icon: '/careers.png', href: '/careers' },
+      { name: 'Giải pháp cho đối tác', desc: 'Tối ưu tồn kho và bán hết phần cuối ngày', icon: '/business.png', href: '/business' },
+      { name: 'Cơ hội nghề nghiệp', desc: 'Trở thành một phần của đội ngũ LASTBITE', icon: '/careers.png', href: '/careers' },
     ]
   },
 ];
@@ -164,7 +164,7 @@ export function SimpleHeader() {
                 href="/download" 
                 className="px-5 py-2 bg-emerald-700 text-white font-medium rounded-full hover:bg-emerald-800 transition shadow-lg shadow-emerald-700/20 dark:shadow-emerald-500/20"
               >
-                Tạo tài khoản
+                Mở tài khoản mới
               </Link>
             </>
           ) : (
@@ -196,10 +196,10 @@ export function SimpleHeader() {
                     </div>
                     
                     <Link href="/profile" className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-amber-100 dark:hover:bg-stone-700 transition text-sm text-stone-700 dark:text-stone-300">
-                      <User size={16} /> Hồ sơ của tôi
+                      <User size={16} /> Hồ sơ cá nhân
                     </Link>
                     <Link href="/history" className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-amber-100 dark:hover:bg-stone-700 transition text-sm text-stone-700 dark:text-stone-300">
-                      <History size={16} /> Lịch sử
+                      <History size={16} /> Lịch sử mua túi
                     </Link>
                     
                     <button className="w-full flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20 text-red-700 dark:text-red-400 transition text-sm mt-1">
@@ -306,7 +306,7 @@ export function SimpleHeader() {
                         className="w-full text-center py-3 bg-emerald-700 text-white font-medium rounded-lg shadow-lg shadow-emerald-700/20 hover:bg-emerald-800 transition"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        Tạo tài khoản
+                        Mở tài khoản mới
                       </Link>
                     </div>
                   ) : (
@@ -325,14 +325,14 @@ export function SimpleHeader() {
                         className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-amber-100 dark:hover:bg-stone-800 transition text-stone-700 dark:text-stone-300"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <User size={16} /> Hồ sơ của tôi
+                        <User size={16} /> Hồ sơ cá nhân
                       </Link>
                       <Link 
                         href="/history"
                         className="flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-amber-100 dark:hover:bg-stone-800 transition text-stone-700 dark:text-stone-300"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        <History size={16} /> Lịch sử
+                        <History size={16} /> Lịch sử mua túi
                       </Link>
                       <button 
                         className="w-full text-left flex items-center gap-3 px-3 py-2 rounded-lg hover:bg-red-50 dark:hover:bg-red-900/20 text-red-700 dark:text-red-400 transition font-medium"

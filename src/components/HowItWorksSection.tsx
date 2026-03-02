@@ -105,7 +105,7 @@ const TextStaggerHover = ({
         </p>
         
         <div className="mt-4 flex items-center gap-2 text-[#1a4731] font-bold text-xs uppercase tracking-widest hover:underline cursor-pointer">
-            Tìm hiểu thêm <ArrowRight className="w-3.5 h-3.5" />
+            Xem chi tiết <ArrowRight className="w-3.5 h-3.5" />
         </div>
       </motion.div>
     </div>
@@ -141,22 +141,22 @@ const HoverSliderImage = ({ index, imageUrl, alt }: { index: number; imageUrl: s
 const STEPS = [
   {
     title: "Bước một",
-    desc: "Khám phá Surprise Bag từ các cửa hàng và nhà hàng gần bạn, lọc theo vị trí hoặc mức giá mong muốn.",
+    desc: "Tìm Surprise Bag quanh bạn, lọc theo khu vực hoặc ngân sách để tìm phần phù hợp nhất.",
     image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=1000&auto=format&fit=crop"
   },
   {
     title: "Bước hai",
-    desc: "Đặt túi trực tiếp trên ứng dụng, thanh toán an toàn để cửa hàng giữ phần ăn cho bạn.",
+    desc: "Đặt túi ngay trên ứng dụng, thanh toán an toàn để cửa hàng giữ phần ngon chờ bạn.",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=1000&auto=format&fit=crop"
   },
   {
     title: "Bước ba",
-    desc: "Đến nhận đúng khung giờ đã hẹn, đưa mã xác nhận điện tử cho nhân viên mà không cần giấy tờ.",
+    desc: "Đến nhận đúng khung giờ hẹn, đưa mã xác nhận điện tử mà không cần thêm giấy tờ nào khác.",
     image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=1000&auto=format&fit=crop"
   },
   {
     title: "Bước bốn",
-    desc: "Tận hưởng bữa ăn ngon và biết rằng bạn vừa cứu thực phẩm khỏi bị bỏ phí, góp phần bảo vệ môi trường.",
+    desc: "Thưởng thức phần ăn bất ngờ và biết rằng bạn vừa cứu thực phẩm khỏi bị bỏ phí.",
     image: "https://images.unsplash.com/photo-1490818387583-1baba5e638af?q=80&w=1000&auto=format&fit=crop"
   },
 ];
@@ -178,10 +178,10 @@ export function HowItWorksSection() {
             {/* Headers */}
             <div className="mb-10">
                  <h2 className="text-[#1a4731]/60 font-bold text-xs uppercase tracking-[0.2em] mb-3">
-                   Cách sử dụng ứng dụng
+                   Cách dùng ứng dụng
                  </h2>
                  <h2 className="text-[#1a4731] font-bold text-4xl md:text-5xl tracking-tight">
-                    Quy trình hoạt động
+                    Quy trình đặt túi
                  </h2>
             </div>
 

@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Be_Vietnam_Pro, JetBrains_Mono } from "next/font/google";
+import { Be_Vietnam_Pro, JetBrains_Mono, Sen } from "next/font/google";
 import "./globals.css";
 import { SmoothScrolling } from "@/components/providers/smooth-scrolling";
 
 const beVietnamPro = Be_Vietnam_Pro({
   subsets: ["latin", "latin-ext", "vietnamese"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800", "900"],
   variable: "--font-brand-sans",
   display: "swap",
 });
@@ -17,10 +17,17 @@ const jetBrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const sen = Sen({
+  subsets: ["latin", "latin-ext", "vietnamese"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-brand-display",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "LASTBITE - Cộng đồng cứu đồ ăn cuối cùng",
+  title: "LASTBITE - Cộng đồng cứu phần ngon cuối cùng",
   description:
-    "Nền tảng LASTBITE kết nối thực phẩm dư thừa với cộng đồng yêu bền vững, giúp tiết kiệm chi phí và giảm lãng phí thực phẩm.",
+    "LASTBITE kết nối phần thực phẩm dư chất lượng với cộng đồng yêu bền vững để tiết kiệm chi phí và giảm lãng phí.",
 };
 
 export default function RootLayout({
@@ -31,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="vi">
       <body
-        className={`${beVietnamPro.variable} ${jetBrainsMono.variable} antialiased`}
+        className={`${beVietnamPro.variable} ${sen.variable} ${jetBrainsMono.variable} antialiased`}
       >
        <SmoothScrolling>
           {children}

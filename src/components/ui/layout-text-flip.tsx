@@ -4,8 +4,8 @@ import { motion, AnimatePresence } from "motion/react";
 import { cn } from "@/lib/utils";
 
 export const LayoutTextFlip = ({
-  text = "Kiến tạo trải nghiệm",
-  words = ["Trang đích", "Khối giao diện", "Phân đoạn trang", "Hiệu ứng 3D"],
+  text = "Kiến tạo trải nghiệm số",
+  words = ["Trang đích", "Khối giao diện", "Tiết tấu nội dung", "Hiệu ứng 3D"],
   duration = 3000,
 }: {
   text: string;

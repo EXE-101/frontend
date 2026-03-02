@@ -188,9 +188,9 @@ export default function WarpShaderHero() {
           <h2 className="text-white text-2xl md:text-4xl font-semibold tracking-tight">
             <Typewriter
               text={[
-                "Chung tay giảm lãng phí thực phẩm",
-                "Săn ưu đãi thực phẩm chất lượng",
-                "Lan tỏa khác biệt cho cộng đồng"
+                "Chung tay chặn đứng lãng phí thực phẩm",
+                "Nhận phần ngon với mức giá dễ chịu",
+                "Lan tỏa lối sống bền vững mỗi ngày"
               ]}
               speed={80}
               deleteSpeed={40}
@@ -201,7 +201,7 @@ export default function WarpShaderHero() {
           </h2>
           
           <p className="text-white/85 text-lg md:text-xl font-light leading-relaxed max-w-3xl mx-auto">
-            Săn phần ăn chất lượng với giá ưu đãi và góp phần tạo nên một cộng đồng bền vững hơn.
+            Đặt Surprise Bag chuẩn ngon, tiết kiệm ngân sách và góp phần giúp cộng đồng giảm lãng phí thực phẩm.
           </p>
 
           <div className="relative pt-8 overflow-hidden">
@@ -218,11 +218,11 @@ export default function WarpShaderHero() {
               // THAY ĐỔI: Đổi màu chữ text-[...] thành text-[#003D33]
               className="px-10 py-4 bg-white text-[#003D33] font-bold rounded-full hover:bg-white/95 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
             >
-              Bắt đầu ngay
+              Khám phá túi gần bạn
             </button>
           </Link>
           <button className="px-10 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-full text-white font-semibold hover:bg-white/20 hover:border-white/50 transition-all duration-300 hover:scale-105">
-            Tìm hiểu thêm
+            Tìm hiểu LASTBITE khác biệt thế nào
           </button>
         </div>
       </div>

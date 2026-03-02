@@ -9,8 +9,8 @@ import { FAQ } from '@/components/FAQ';
 import { Footer } from '@/components/Footer';
 
 export const metadata = {
-  title: 'LASTBITE - Cách nhận túi cứu đồ ăn',
-  description: 'Cẩm nang từng bước để đặt, nhận và tận hưởng Surprise Bag từ LASTBITE một cách nhanh chóng, chuẩn chỉnh.',
+  title: 'LASTBITE - Cách nhận túi cứu phần ngon',
+  description: 'Cẩm nang từng bước để đặt, nhận và tận hưởng Surprise Bag từ LASTBITE thật nhanh gọn và chuẩn chỉnh.',
 };
 
 export default function Home() {

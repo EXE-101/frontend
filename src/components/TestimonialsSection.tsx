@@ -9,37 +9,37 @@ import { Star, Quote, ArrowLeft, ArrowRight } from 'lucide-react';
 const testimonials = [
   {
     id: 1,
-    quote: "LASTBITE giúp tôi tiết kiệm hơn 100 USD mỗi tháng. Thực phẩm vẫn ngon, sạch mà giá lại mềm, tôi rất hài lòng.",
+    quote: "LASTBITE giúp tôi tiết kiệm hơn 2 triệu tiền ăn mỗi tháng. Túi nào cũng sạch, ngon và đủ bất ngờ.",
     name: 'Nguyen Minh Anh',
-    designation: 'Sinh viên, Đại học FPT',
+    designation: 'Sinh viên Đại học FPT',
     src: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3540&auto=format&fit=crop',
   },
   {
     id: 2,
-    quote: "Lịch làm việc bận rộn nhưng LASTBITE giúp tôi đặt trước, ghé nhận nhanh và vẫn hưởng giá ưu đãi. Lại còn giảm lãng phí nữa!",
+    quote: "Lịch làm việc bận rộn nhưng tôi chỉ cần đặt trước vài phút là ghé nhận ngay, vẫn được giá ưu đãi và biết mình đang giảm lãng phí.",
     name: 'Tran Van Khoa',
     designation: 'Trưởng phòng Marketing',
     src: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=3540&auto=format&fit=crop',
   },
   {
     id: 3,
-    quote: "Tiệm bánh của tôi giảm 40% lượng hàng tồn mỗi ngày, doanh thu tăng và có thêm khách mới. Thật sự ấn tượng!",
+    quote: "Tiệm bánh giảm 40% hàng tồn cuối ngày, doanh thu tăng và khách mới tìm đến nhiều hơn.",
     name: 'Le Thi Huong',
     designation: 'Chủ tiệm Sweet Dreams Bakery',
     src: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop',
   },
   {
     id: 4,
-    quote: "Tôi rất thích ý tưởng giảm lãng phí thực phẩm. Mỗi Surprise Bag đều là món quà bất ngờ cho cả gia đình.",
+    quote: "Mỗi Surprise Bag là trải nghiệm vui cho cả nhà, vừa ngon vừa giúp tôi dạy con ý thức tiết kiệm.",
     name: 'Pham Hoang Nam',
     designation: 'Kỹ sư phần mềm',
     src: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=3540&auto=format&fit=crop',
   },
   {
     id: 5,
-    quote: "LASTBITE giúp siêu thị của chúng tôi tối ưu tồn kho cuối ngày. Giải pháp đôi bên cùng có lợi cho doanh nghiệp và khách hàng.",
+    quote: "LASTBITE giúp siêu thị tối ưu tồn kho cuối ngày, khách vui còn chúng tôi giảm chi phí xử lý rác.",
     name: 'Vo Minh Tuan',
-    designation: 'Quản lý, CoopMart',
+    designation: 'Quản lý tại CoopMart',
     src: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=3540&auto=format&fit=crop',
   },
 ];
@@ -87,10 +87,10 @@ export function TestimonialsSection() {
         {/* HEADER */}
         <div className="text-center mb-16 md:mb-20">
           <h2 className="text-4xl md:text-5xl font-extrabold text-primary mb-6 tracking-tight">
-            Người dùng nói gì về LASTBITE
+            Người dùng kể gì về LASTBITE
           </h2>
           <p className="text-foreground/60 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
-            Hàng nghìn người tin dùng LASTBITE mỗi ngày để vừa tiết kiệm chi phí vừa bảo vệ hành tinh.
+            Hàng nghìn người chọn LASTBITE mỗi ngày để vừa tiết kiệm chi tiêu vừa góp phần bảo vệ hành tinh.
           </p>
         </div>
 
