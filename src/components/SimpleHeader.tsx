@@ -13,16 +13,25 @@ const NAV_ITEMS = [
     link: '/',
   },
   {
-    name: 'Hướng dẫn nhận túi',
-    link: '/how-to-collect',
-  },
-  {
-    name: 'Dịch vụ', // Ví dụ menu có submenu
+    name: 'Hướng dẫn',
     link: '#',
     submenu: [
-      { name: 'Giải pháp cho đối tác', desc: 'Tối ưu tồn kho và bán hết phần cuối ngày', icon: '/business.png', href: '/business' },
-      { name: 'Cơ hội nghề nghiệp', desc: 'Trở thành một phần của đội ngũ LASTBITE', icon: '/careers.png', href: '/careers' },
+      { name: 'Cách ứng dụng hoạt động', desc: 'Quy trình đặt và nhận túi cứu đồ ăn', icon: '/guide.png', href: '/guide/how-it-works' },
+      { name: 'Hướng dẫn nhận túi', desc: 'Quy trình check-in và nhận tại cửa hàng', icon: '/collect.png', href: '/guide/how-to-collect' },
     ]
+  },
+  {
+    name: 'Giải pháp Doanh nghiệp',
+    link: '#',
+    submenu: [
+      { name: 'Marketplace Surprise Bags', desc: 'Tối ưu tồn kho với hơn 10,000 khách hàng tiềm năng', icon: '/market.png', href: '/business/marketplace' },
+      { name: 'Nền tảng quản lý', desc: 'Giải pháp end-to-end cho Siêu thị và chuỗi Bán lẻ', icon: '/platform.png', href: '/business/platform' },
+      { name: 'Sáng kiến dán nhãn', desc: 'Nhãn Look-Smell-Taste giảm lãng phí tại gia đình', icon: '/label.png', href: '/business/date-labelling' },
+    ]
+  },
+  {
+    name: 'Về chúng tôi',
+    link: '/about',
   },
 ];
 
@@ -80,7 +89,7 @@ export function SimpleHeader() {
           boxShadow: visible
             ? '0 0 24px rgba(92, 64, 51, 0.06), 0 1px 1px rgba(0, 0, 0, 0.05), 0 0 0 1px rgba(92, 64, 51, 0.04), 0 0 4px rgba(92, 64, 51, 0.08), 0 16px 68px rgba(79, 70, 65, 0.05), 0 1px 0 rgba(255, 255, 255, 0.1) inset'
             : 'none',
-          width: visible ? '60%' : '100%',
+          width: visible ? '90%' : '100%',
           y: visible ? 20 : 0,
         }}
         transition={{
@@ -99,8 +108,8 @@ export function SimpleHeader() {
         )}
       >
         {/* --- LOGO --- */}
-        <Link href="/" className="font-bold text-2xl flex items-center gap-2 relative z-20">
-          <span className="text-emerald-700 dark:text-emerald-700">LASTBITE</span>
+        <Link href="/" className="font-bold text-2xl flex items-center gap-2 relative z-20 whitespace-nowrap">
+          <span className="text-emerald-700 dark:text-emerald-700 flex-shrink-0">LASTBITE</span>
         </Link>
 
         {/* --- DESKTOP MENU --- */}
@@ -114,7 +123,7 @@ export function SimpleHeader() {
             >
               <Link
                 href={item.link}
-                className="flex items-center gap-1 text-stone-700 hover:text-emerald-700 dark:text-stone-300 dark:hover:text-emerald-500 font-medium transition py-2 px-4 rounded-full hover:bg-amber-100/50 dark:hover:bg-stone-800/50"
+                className="flex items-center gap-1 text-stone-700 hover:text-emerald-700 dark:text-stone-300 dark:hover:text-emerald-500 font-medium transition py-2 px-4 rounded-full hover:bg-amber-100/50 dark:hover:bg-stone-800/50 whitespace-nowrap"
               >
                 {item.name}
                 {item.submenu && <ChevronDown size={16} />}
@@ -156,15 +165,15 @@ export function SimpleHeader() {
             <>
               <Link
                 href="/auth/login"
-                className="text-stone-700 hover:text-stone-900 dark:text-stone-300 dark:hover:text-amber-50 font-medium px-4 py-2 rounded-full hover:bg-amber-100/50 dark:hover:bg-stone-800/50 transition"
+                className="text-stone-700 hover:text-stone-900 dark:text-stone-300 dark:hover:text-amber-50 font-medium px-4 py-2 rounded-full hover:bg-amber-100/50 dark:hover:bg-stone-800/50 transition whitespace-nowrap"
               >
                 Đăng nhập
               </Link>
               <Link
                 href="/auth/register"
-                className="px-5 py-2 bg-emerald-700 text-white font-medium rounded-full hover:bg-emerald-800 transition shadow-lg shadow-emerald-700/20 dark:shadow-emerald-500/20"
+                className="px-5 py-2 bg-emerald-700 text-white font-medium rounded-full hover:bg-emerald-800 transition shadow-lg shadow-emerald-700/20 dark:shadow-emerald-500/20 whitespace-nowrap"
               >
-                Mở tài khoản mới
+                Tham gia ngay
               </Link>
             </>
           ) : (
@@ -306,7 +315,7 @@ export function SimpleHeader() {
                         className="w-full text-center py-3 bg-emerald-700 text-white font-medium rounded-lg shadow-lg shadow-emerald-700/20 hover:bg-emerald-800 transition"
                         onClick={() => setIsMobileMenuOpen(false)}
                       >
-                        Mở tài khoản mới
+                        Tham gia ngay
                       </Link>
                     </div>
                   ) : (

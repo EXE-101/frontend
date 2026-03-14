@@ -47,10 +47,10 @@ export default function LoginPage() {
                 className="space-y-2 text-center"
             >
                 <h1 className="text-2xl sm:text-3xl font-bold text-stone-900 dark:text-amber-50 font-display">
-                    Chào mừng trở lại! 👋
+                    Chào mừng bạn trở lại! 👋
                 </h1>
                 <p className="text-stone-500 dark:text-stone-400 text-sm">
-                    Đăng nhập để tiếp tục cứu phần ngon cùng LASTBITE
+                    Đăng nhập để tiếp tục hành trình trải nghiệm ẩm thực bền vững.
                 </p>
             </motion.div>
 
@@ -191,7 +191,7 @@ export default function LoginPage() {
                         htmlFor="remember"
                         className="text-sm text-stone-500 dark:text-stone-400 cursor-pointer select-none"
                     >
-                        Ghi nhớ đăng nhập
+                        Duy trì đăng nhập
                     </label>
                 </div>
 
@@ -221,7 +221,7 @@ export default function LoginPage() {
                 transition={{ duration: 0.5, delay: 0.3 }}
                 className="text-center text-sm text-stone-500 dark:text-stone-400"
             >
-                Chưa có tài khoản?{' '}
+                Trở thành thành viên mới?{' '}
                 <Link
                     href="/auth/register"
                     className="text-emerald-700 dark:text-emerald-500 hover:text-emerald-800 dark:hover:text-emerald-400 font-semibold transition-colors"

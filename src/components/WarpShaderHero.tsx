@@ -26,9 +26,9 @@ export default function WarpShaderHero() {
       // Use white color for the arrow to stand out on the dark green background
       resolvedCanvasColorsRef.current.strokeStyle = { r: 255, g: 255, b: 255 };
     };
-    
+
     updateResolvedColors();
-    
+
     const observer = new MutationObserver((mutationsList) => {
       for (const mutation of mutationsList) {
         if (mutation.type === 'attributes' && mutation.attributeName === 'class' && mutation.target === document.documentElement) {
@@ -37,9 +37,9 @@ export default function WarpShaderHero() {
         }
       }
     });
-    
+
     observer.observe(document.documentElement, { attributes: true });
-    
+
     return () => {
       observer.disconnect();
       if (tempElement.parentNode) {
@@ -74,9 +74,9 @@ export default function WarpShaderHero() {
     const t = Math.max(-1, Math.min(1, (y0 - y1) / 200));
     const controlX = midX;
     const controlY = midY + offset * t;
-    
-    const r = Math.sqrt((x1 - x0)**2 + (y1 - y0)**2);
-    const opacity = Math.min(1.0, (r - Math.max(rect.width, rect.height) / 2) / 500); 
+
+    const r = Math.sqrt((x1 - x0) ** 2 + (y1 - y0) ** 2);
+    const opacity = Math.min(1.0, (r - Math.max(rect.width, rect.height) / 2) / 500);
 
     const arrowColor = resolvedCanvasColorsRef.current.strokeStyle;
     ctx.strokeStyle = `rgba(${arrowColor.r}, ${arrowColor.g}, ${arrowColor.b}, ${opacity})`;
@@ -93,7 +93,7 @@ export default function WarpShaderHero() {
 
     // Draw arrowhead
     const angle = Math.atan2(y1 - controlY, x1 - controlX);
-    const headLength = 10 * (ctx.lineWidth / 1.5); 
+    const headLength = 10 * (ctx.lineWidth / 1.5);
     ctx.beginPath();
     ctx.moveTo(x1, y1);
     ctx.lineTo(
@@ -137,7 +137,7 @@ export default function WarpShaderHero() {
       }
       animationFrameIdRef.current = requestAnimationFrame(animateLoop);
     };
-    
+
     animateLoop();
 
     return () => {
@@ -188,9 +188,9 @@ export default function WarpShaderHero() {
           <h2 className="text-white text-2xl md:text-4xl font-semibold tracking-tight">
             <Typewriter
               text={[
-                "Chung tay chặn đứng lãng phí thực phẩm",
-                "Nhận phần ngon với mức giá dễ chịu",
-                "Lan tỏa lối sống bền vững mỗi ngày"
+                "Thưởng thức trọn vẹn - Sống xanh mỗi ngày",
+                "Tinh hoa ẩm thực với mức giá tối ưu",
+                "Minh bạch chất lượng - Trọn vẹn niềm tin"
               ]}
               speed={80}
               deleteSpeed={40}
@@ -199,9 +199,9 @@ export default function WarpShaderHero() {
               className="inline-block"
             />
           </h2>
-          
+
           <p className="text-white/85 text-lg md:text-xl font-light leading-relaxed max-w-3xl mx-auto">
-            Đặt Surprise Bag chuẩn ngon, tiết kiệm ngân sách và góp phần giúp cộng đồng giảm lãng phí thực phẩm.
+            Khám phá thực đơn trong ngày và các Hộp quà bất ngờ từ những thương hiệu uy tín. Trải nghiệm ẩm thực chất lượng, tiết kiệm thông minh và chung tay kiến tạo lối sống không lãng phí (Zero Waste).
           </p>
 
           <div className="relative pt-8 overflow-hidden">
@@ -213,16 +213,16 @@ export default function WarpShaderHero() {
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link href="/how-to-collect">
-            <button 
+            <button
               ref={targetRef}
               // THAY ĐỔI: Đổi màu chữ text-[...] thành text-[#003D33]
               className="px-10 py-4 bg-white text-[#003D33] font-bold rounded-full hover:bg-white/95 transition-all duration-300 hover:scale-105 shadow-xl hover:shadow-2xl"
             >
-              Khám phá túi gần bạn
+              Khám phá thực đơn gần bạn
             </button>
           </Link>
           <button className="px-10 py-4 bg-white/10 backdrop-blur-sm border-2 border-white/30 rounded-full text-white font-semibold hover:bg-white/20 hover:border-white/50 transition-all duration-300 hover:scale-105">
-            Tìm hiểu LASTBITE khác biệt thế nào
+            Trải nghiệm LASTBITE
           </button>
         </div>
       </div>
