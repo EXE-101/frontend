@@ -35,18 +35,18 @@ const MagicText = ({ text, className }: { text: string, className?: string }) =>
 
 // --- 2. COMPONENT THẺ SỐ LIỆU (STAT CARD) ---
 // Đã fix lỗi "any" bằng React.ElementType
-const StatCard = ({ 
-  icon: Icon, 
-  value, 
-  label, 
-  delay 
-}: { 
-  icon: React.ElementType, 
-  value: string, 
-  label: string, 
-  delay: number 
+const StatCard = ({
+  icon: Icon,
+  value,
+  label,
+  delay
+}: {
+  icon: React.ElementType,
+  value: string,
+  label: string,
+  delay: number
 }) => (
-  <motion.div 
+  <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
@@ -70,16 +70,16 @@ export function ProblemSection() {
   return (
     // Nền màu Xanh Đậm (#004d40) chuẩn theo ảnh
     <section className="relative py-24 overflow-hidden bg-[#003D33]">
-      
+
       {/* Background Pattern tinh tế */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,245,225,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,245,225,0.03)_1px,transparent_1px)] bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_50%,black,transparent)]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* Cột trái: Text chính */}
           <div className="space-y-8">
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -87,68 +87,68 @@ export function ProblemSection() {
             >
               {/* Badge nhỏ màu Kem */}
               <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FFF5E1] text-[#004d40] text-xs font-bold tracking-widest uppercase mb-6 shadow-lg">
-                Góc nhìn thực tế
+                Góc nhìn Thực tế
               </div>
-              
+
               <h2 className="text-4xl md:text-5xl font-bold text-[#FFF5E1] mb-6 leading-[1.15]">
-                Lãng phí thực phẩm đang là <br/>
-                <span className="text-[#FFF5E1]/50">khủng hoảng thầm lặng khó thấy.</span>
+                Lãng phí thực phẩm: Thách thức thời đại <br />
+                <span className="text-[#FFF5E1]/50">và Trách nhiệm của chúng ta.</span>
               </h2>
             </motion.div>
 
             {/* MagicText: Hiệu ứng lướt chữ bạn yêu cầu */}
             <div className="text-lg md:text-xl text-[#FFF5E1]/80 leading-relaxed font-light">
-              <MagicText 
-                text="Người Việt đang bỏ đi gần 8,8 triệu tấn thực phẩm mỗi năm, đồng nghĩa với khoản thất thoát khoảng 3,9 tỷ USD. Riêng TP.HCM phát sinh khoảng 8.000 tấn rác thực phẩm mỗi ngày và lượng khí metan tương ứng khiến biến đổi khí hậu trầm trọng hơn. LASTBITE được tạo ra để lật ngược câu chuyện ấy: biến phần dư thành giá trị."
+              <MagicText
+                text="Mỗi năm, hàng triệu tấn thực phẩm chất lượng bị lãng phí, gây thất thoát hàng nghìn tỷ đồng và tạo ra lượng khí thải Metan khổng lồ tác động tiêu cực đến khí hậu. LASTBITE ra đời để kiến tạo một giải pháp toàn diện: kết nối cung cầu thông minh, tối ưu hóa vòng đời thực phẩm và bảo vệ môi trường, trong khi vẫn đặt tiêu chuẩn vệ sinh an toàn lên mức tuyệt đối."
                 className="block"
               />
             </div>
 
             <motion.div
-               initial={{ opacity: 0, y: 10 }}
-               whileInView={{ opacity: 1, y: 0 }}
-               viewport={{ once: true }}
-               transition={{ delay: 1 }}
-               className="pt-4"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 1 }}
+              className="pt-4"
             >
-               <button className="group flex items-center gap-2 text-[#FFF5E1] font-bold border-b-2 border-[#FFF5E1] pb-1 hover:text-[#FFF5E1]/80 transition-all">
-                  Đọc báo cáo tác động đầy đủ <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform"/>
-               </button>
+              <button className="group flex items-center gap-2 text-[#FFF5E1] font-bold border-b-2 border-[#FFF5E1] pb-1 hover:text-[#FFF5E1]/80 transition-all">
+                Đọc Báo cáo Tác động <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </button>
             </motion.div>
           </div>
 
           {/* Cột phải: Grid số liệu (Giữ layout này nhìn cho chuyên nghiệp) */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <StatCard 
+            <StatCard
               icon={Trash2}
-              value="8,8 triệu tấn"
-              label="Khối lượng thực phẩm bị bỏ đi mỗi năm tại Việt Nam."
+              value="8,8 Triệu Tấn"
+              label="Khối lượng thực phẩm lãng phí hàng năm tại Việt Nam."
               delay={0.2}
             />
-            <StatCard 
+            <StatCard
               icon={TrendingDown}
-              value="$3,9 tỷ"
-              label="Khoản thiệt hại kinh tế ước tính hằng năm."
+              value="120 Nghìn Tỷ"
+              label="Thiệt hại kinh tế ước tính từ việc lãng phí tài nguyên."
               delay={0.3}
             />
-            <StatCard 
+            <StatCard
               icon={CloudAlert}
-              value="8.000 tấn"
-              label="Rác thực phẩm mỗi ngày tại TP.HCM, tạo ra lượng khí metan lớn."
+              value="Cam kết An toàn"
+              label="100% đối tác đạt chuẩn Vệ sinh An toàn Thực phẩm."
               delay={0.4}
             />
-            
+
             {/* Thẻ Call To Action */}
-             <motion.div 
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.5 }}
-                className="bg-[#FFF5E1] p-6 rounded-xl flex flex-col justify-center items-center text-center cursor-pointer shadow-xl hover:scale-[1.02] transition-transform"
-              >
-                <h3 className="text-2xl font-bold text-[#004d40] mb-2">Cùng hành động ngay</h3>
-                <p className="text-[#004d40]/70 text-sm font-medium">Cứu phần ngon ngay hôm nay</p>
-              </motion.div>
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.5 }}
+              className="bg-[#FFF5E1] p-6 rounded-xl flex flex-col justify-center items-center text-center cursor-pointer shadow-xl hover:scale-[1.02] transition-transform"
+            >
+              <h3 className="text-2xl font-bold text-[#004d40] mb-2">Trở thành một phần</h3>
+              <p className="text-[#004d40]/70 text-sm font-medium">của giải pháp ngay hôm nay.</p>
+            </motion.div>
           </div>
 
         </div>
