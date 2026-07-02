@@ -55,12 +55,15 @@ export function Footer() {
 
           {/* Legal Links */}
           <div className="space-y-3">
-            <h4 className="font-bold text-base mb-4">Pháp lý & Hỗ trợ</h4>
+            <h4 className="font-bold text-base mb-4">Pháp lý & Quyền riêng tư</h4>
+            <Link href="/privacy-policy" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
+              Chính sách Bảo mật (Privacy)
+            </Link>
+            <Link href="/account-deletion" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
+              Yêu cầu xóa tài khoản (Data Safety)
+            </Link>
             <Link href="/terms" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
               Điều khoản Dịch vụ
-            </Link>
-            <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Chính sách Bảo mật
             </Link>
             <Link href="/trust-framework" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
               Tiêu chuẩn Vệ sinh ATTP
