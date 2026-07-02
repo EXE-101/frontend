@@ -15,41 +15,41 @@ export function Footer() {
               <span className="font-bold text-lg">LASTBITE</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
-              Kết nối nhà hàng, tiệm bánh và cửa hàng để bán hết phần ngon cuối ngày, vừa có lời vừa giảm lãng phí cho cộng đồng.
+              Tái định nghĩa thói quen tiêu dùng thức ăn nhanh. Chúng tôi kết nối bạn với những bữa ăn chất lượng, giải quyết bài toán lãng phí và xây dựng hệ sinh thái F&B bền vững.
             </p>
           </div>
 
           {/* Company Links */}
           <div className="space-y-3">
-            <h4 className="font-bold text-base mb-4">Về LASTBITE</h4>
-            <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition">
-              Hành trình thương hiệu
+            <h4 className="font-bold text-base mb-4">Khám phá LASTBITE</h4>
+            <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
+              Văn hóa LASTBITE
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Tác động bền vững
+              Báo cáo Phát thải
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Gia nhập đội ngũ
+              Cơ hội Nghề nghiệp
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Đăng ký bản tin
+              Tin tức & Sự kiện
             </Link>
           </div>
 
           {/* Business Links */}
           <div className="space-y-3">
-            <h4 className="font-bold text-base mb-4">Giải pháp cho đối tác</h4>
-            <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition">
-              Đăng ký hợp tác với LASTBITE
+            <h4 className="font-bold text-base mb-4">Dành cho Đối tác</h4>
+            <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
+              Tham gia Mạng lưới LASTBITE
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Giải pháp cho bán lẻ
+              Tối ưu Vận hành (F&B)
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Tài nguyên vận hành
+              Giải pháp Siêu thị
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Gói giải pháp thông minh
+              Công cụ Quản lý Cửa hàng
             </Link>
           </div>
 
@@ -57,16 +57,19 @@ export function Footer() {
           <div className="space-y-3">
             <h4 className="font-bold text-base mb-4">Pháp lý & Quyền riêng tư</h4>
             <Link href="/privacy-policy" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Chính sách bảo mật (Privacy)
+              Chính sách Bảo mật (Privacy)
             </Link>
             <Link href="/account-deletion" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
               Yêu cầu xóa tài khoản (Data Safety)
             </Link>
-            <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Điều khoản sử dụng
+            <Link href="/terms" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
+              Điều khoản Dịch vụ
+            </Link>
+            <Link href="/trust-framework" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
+              Tiêu chuẩn Vệ sinh ATTP
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Chính sách cookie
+              Trung tâm Trợ giúp
             </Link>
           </div>
         </div>
@@ -75,7 +78,7 @@ export function Footer() {
         <div className="border-t border-primary-foreground/20 py-8 space-y-6">
           {/* Social Links */}
           <div className="flex items-center gap-6">
-            <span className="text-sm font-semibold">Kết nối cùng LASTBITE</span>
+            <span className="text-sm font-semibold">Kết nối với chúng tôi</span>
             <div className="flex gap-4">
               <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground transition">
                 <Facebook size={20} />
@@ -95,7 +98,7 @@ export function Footer() {
           {/* Copyright */}
           <div className="pt-4 border-t border-primary-foreground/20">
             <p className="text-primary-foreground/70 text-sm text-center">
-              © {new Date().getFullYear()} LASTBITE. Đã đăng ký bản quyền.
+              © 2024 LASTBITE Vietnam. Mọi quyền được bảo lưu.
             </p>
           </div>
         </div>

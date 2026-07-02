@@ -65,12 +65,11 @@ const TextStaggerHover = ({
       className="group cursor-pointer py-6 border-b border-black/5 last:border-none relative z-10"
       onMouseEnter={() => changeSlide(index)}
     >
-      {/* Step Title */}
-      <h3 className={cn("relative inline-block overflow-hidden text-4xl md:text-5xl font-extrabold uppercase tracking-tight leading-none mb-3 transition-colors duration-300", className)}>
+      <h3 className={cn("relative inline-block overflow-hidden text-3xl md:text-4xl lg:text-[2.5rem] font-extrabold uppercase tracking-tight leading-none mb-3 transition-colors duration-300", className)}>
         {characters.map((char, i) => (
           <span key={`char-${i}`} className="relative inline-block overflow-hidden">
             <MotionConfig transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94], delay: i * 0.02 }}>
-              
+
               {/* Inactive Text */}
               <motion.span
                 className="inline-block text-[#1a4731]/20"
@@ -92,7 +91,7 @@ const TextStaggerHover = ({
           </span>
         ))}
       </h3>
-      
+
       {/* Description */}
       <motion.div
         initial={{ height: 0, opacity: 0 }}
@@ -103,9 +102,9 @@ const TextStaggerHover = ({
         <p className="text-base text-gray-600 font-medium max-w-md leading-relaxed antialiased">
           {description}
         </p>
-        
+
         <div className="mt-4 flex items-center gap-2 text-[#1a4731] font-bold text-xs uppercase tracking-widest hover:underline cursor-pointer">
-            Xem chi tiết <ArrowRight className="w-3.5 h-3.5" />
+          Xem chi tiết <ArrowRight className="w-3.5 h-3.5" />
         </div>
       </motion.div>
     </div>
@@ -140,23 +139,23 @@ const HoverSliderImage = ({ index, imageUrl, alt }: { index: number; imageUrl: s
 // --- DATA ---
 const STEPS = [
   {
-    title: "Bước một",
-    desc: "Tìm Surprise Bag quanh bạn, lọc theo khu vực hoặc ngân sách để tìm phần phù hợp nhất.",
+    title: "Bước một - Khám phá",
+    desc: "Mở ứng dụng để lướt xem thực đơn chi tiết từ các cửa hàng gần bạn hoặc chọn một Hộp quà bất ngờ (Surprise Bag).",
     image: "https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=1000&auto=format&fit=crop"
   },
   {
-    title: "Bước hai",
-    desc: "Đặt túi ngay trên ứng dụng, thanh toán an toàn để cửa hàng giữ phần ngon chờ bạn.",
+    title: "Bước hai - Đặt trước",
+    desc: "Chốt đơn ngay trên ứng dụng và chọn khung giờ nhận hàng phù hợp nhất với lịch trình của bạn.",
     image: "https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?q=80&w=1000&auto=format&fit=crop"
   },
   {
-    title: "Bước ba",
-    desc: "Đến nhận đúng khung giờ hẹn, đưa mã xác nhận điện tử mà không cần thêm giấy tờ nào khác.",
+    title: "Bước ba - Trải nghiệm",
+    desc: "Đến cửa hàng (Pick-up), trực tiếp kiểm tra chất lượng phần ăn bằng mắt thường và tự tay bấm xác nhận. Hoặc chọn Giao hàng với cam kết niêm phong an toàn.",
     image: "https://images.unsplash.com/photo-1556740738-b6a63e27c4df?q=80&w=1000&auto=format&fit=crop"
   },
   {
-    title: "Bước bốn",
-    desc: "Thưởng thức phần ăn bất ngờ và biết rằng bạn vừa cứu thực phẩm khỏi bị bỏ phí.",
+    title: "Bước bốn - Thưởng thức",
+    desc: "Tận hưởng hương vị tuyệt hảo, tiết kiệm chi tiêu và tự hào vì bạn đã đóng góp vào một hành tinh xanh.",
     image: "https://images.unsplash.com/photo-1490818387583-1baba5e638af?q=80&w=1000&auto=format&fit=crop"
   },
 ];
@@ -165,36 +164,36 @@ const STEPS = [
 export function HowItWorksSection() {
   return (
     <section className="bg-[#FAF7F2] py-20 md:py-28 overflow-hidden font-sans">
-      
+
       {/* SỬA: Tăng max-w-6xl lên max-w-7xl để khung rộng ra -> Chữ sẽ dời sang trái */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        
+
         {/* HoverSlider Layout */}
         <HoverSlider className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* LEFT COLUMN: Text Content */}
           <div className="flex flex-col justify-center order-2 lg:order-1">
-            
+
             {/* Headers */}
             <div className="mb-10">
-                 <h2 className="text-[#1a4731]/60 font-bold text-xs uppercase tracking-[0.2em] mb-3">
-                   Cách dùng ứng dụng
-                 </h2>
-                 <h2 className="text-[#1a4731] font-bold text-4xl md:text-5xl tracking-tight">
-                    Quy trình đặt túi
-                 </h2>
+              <h2 className="text-[#1a4731]/60 font-bold text-xs uppercase tracking-[0.2em] mb-3">
+                Quy trình Trải nghiệm
+              </h2>
+              <h2 className="text-[#1a4731] font-bold text-4xl md:text-5xl tracking-tight">
+                Tận hưởng trọn vẹn chỉ với 4 bước
+              </h2>
             </div>
 
             {/* List of Steps */}
             <div className="w-full">
-                {STEPS.map((step, index) => (
+              {STEPS.map((step, index) => (
                 <TextStaggerHover
-                    key={index}
-                    index={index}
-                    text={step.title}
-                    description={step.desc}
+                  key={index}
+                  index={index}
+                  text={step.title}
+                  description={step.desc}
                 />
-                ))}
+              ))}
             </div>
           </div>
 

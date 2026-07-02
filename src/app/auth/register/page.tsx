@@ -8,8 +8,8 @@ import { Mail, Lock, Eye, EyeOff, User, ArrowRight, ArrowLeft } from 'lucide-rea
 type TabKey = 'social' | 'email';
 
 const tabs: { key: TabKey; label: string; icon: string }[] = [
-    { key: 'social', label: 'Nhanh', icon: '⚡' },
-    { key: 'email', label: 'Email', icon: '✉️' },
+    { key: 'social', label: 'Đăng ký nhanh', icon: '⚡' },
+    { key: 'email', label: 'Sử dụng Email', icon: '✉️' },
 ];
 
 export default function RegisterPage() {
@@ -56,10 +56,10 @@ export default function RegisterPage() {
                 className="space-y-2 text-center"
             >
                 <h1 className="text-2xl sm:text-3xl font-bold text-stone-900 dark:text-amber-50 font-display">
-                    Tạo tài khoản 🌱
+                    Bắt đầu hành trình mới 🌱
                 </h1>
                 <p className="text-stone-500 dark:text-stone-400 text-sm">
-                    Tham gia cộng đồng cứu phần ngon cùng LASTBITE
+                    Gia nhập cộng đồng tiêu dùng thông minh và trân trọng giá trị thực phẩm.
                 </p>
             </motion.div>
 
@@ -75,8 +75,8 @@ export default function RegisterPage() {
                         type="button"
                         onClick={() => setActiveTab(tab.key)}
                         className={`relative flex-1 flex items-center justify-center gap-1.5 py-2.5 text-sm font-semibold rounded-xl transition-colors duration-200 z-10 ${activeTab === tab.key
-                                ? 'text-emerald-800 dark:text-emerald-300'
-                                : 'text-stone-400 dark:text-stone-500 hover:text-stone-600 dark:hover:text-stone-300'
+                            ? 'text-emerald-800 dark:text-emerald-300'
+                            : 'text-stone-400 dark:text-stone-500 hover:text-stone-600 dark:hover:text-stone-300'
                             }`}
                     >
                         <span className="text-base">{tab.icon}</span>
@@ -294,20 +294,21 @@ export default function RegisterPage() {
                                     htmlFor="terms"
                                     className="text-sm text-stone-500 dark:text-stone-400 cursor-pointer select-none leading-snug"
                                 >
-                                    Tôi đồng ý với{' '}
+                                    Tôi đã đọc và đồng ý với{' '}
                                     <Link
                                         href="#"
                                         className="text-emerald-700 dark:text-emerald-500 hover:underline font-medium"
                                     >
-                                        Điều khoản sử dụng
+                                        Điều khoản Sử dụng
                                     </Link>{' '}
-                                    và{' '}
+                                    cùng{' '}
                                     <Link
                                         href="#"
                                         className="text-emerald-700 dark:text-emerald-500 hover:underline font-medium"
                                     >
-                                        Chính sách bảo mật
-                                    </Link>
+                                        Chính sách Bảo mật
+                                    </Link>{' '}
+                                    của LASTBITE.
                                 </label>
                             </div>
 
@@ -345,7 +346,7 @@ export default function RegisterPage() {
                     href="/auth/login"
                     className="text-emerald-700 dark:text-emerald-500 hover:text-emerald-800 dark:hover:text-emerald-400 font-semibold transition-colors"
                 >
-                    Đăng nhập
+                    Đăng nhập tại đây.
                 </Link>
             </motion.p>
         </motion.div>
