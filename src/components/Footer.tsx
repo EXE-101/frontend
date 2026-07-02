@@ -55,18 +55,18 @@ export function Footer() {
 
           {/* Legal Links */}
           <div className="space-y-3">
-            <h4 className="font-bold text-base mb-4">Pháp lý</h4>
-            <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition">
+            <h4 className="font-bold text-base mb-4">Pháp lý & Quyền riêng tư</h4>
+            <Link href="/privacy-policy" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
+              Chính sách bảo mật (Privacy)
+            </Link>
+            <Link href="/account-deletion" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
+              Yêu cầu xóa tài khoản (Data Safety)
+            </Link>
+            <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
               Điều khoản sử dụng
             </Link>
             <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Chính sách bảo mật
-            </Link>
-            <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
               Chính sách cookie
-            </Link>
-            <Link href="#" className="text-primary-foreground/80 hover:text-primary-foreground text-sm transition block">
-              Kênh liên hệ
             </Link>
           </div>
         </div>
